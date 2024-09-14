@@ -1,0 +1,1143 @@
+/* -----Fonts----- */
+@font-face {
+    /* para Titulos y Subtitulos */
+    font-family: "Dax Regular";
+    src: url('../fonts/Dax\ Regular.ttf');
+}
+
+@font-face {
+    /* para parrafos, texto en gral */
+    font-family: "MontserratAlternates-Regular";
+    src: url('../fonts/MontserratAlternates-Regular.ttf');
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Dax Regular";
+}
+
+.placeholder {
+    height: 50px;
+}
+
+body p {
+    font-family: "MontserratAlternates-Regular";
+    line-height: 2rem;
+}
+
+/* ----------------------- Header-NavBar -------------------------- */
+
+/* Estilos para el header de la página */
+header {
+    background: #192233; /* Fondo de color oscuro */
+}
+
+/* Estilos para el logo en el header */
+.logo {
+    max-width: 150px; /* Limita el tamaño máximo del logo a 150px */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #192233; /* Fondo oscuro que coincide con el header */
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+.navbar-nav .nav-link {
+    color: white; /* Texto en color blanco */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-family: "Dax Regular"; /* Usa la fuente 'Dax Regular' */
+    margin: 0 10px 0 10px; /* Margen horizontal de 10px entre los enlaces */
+}
+
+/* Estilos para el offcanvas (menú desplegable en dispositivos móviles) */
+.offcanvas {
+    background-color: #192233; /* Fondo oscuro en el offcanvas */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para los enlaces dentro del menú offcanvas */
+.offcanvas .nav-link {
+    color: white; /* Texto en blanco */
+}
+
+/* Corregir la clase mal escrita (cambiar .nav-limk a .nav-link) */
+.nav-link {
+    font-weight: 600; /* Hace el texto más grueso (negrita) */
+    color: #333; /* Color del texto en gris oscuro */
+}
+
+/* Elimina el contorno que aparece al hacer clic en el botón del menú en móviles */
+.navbar-toggler:focus {
+    box-shadow: none; /* Sin sombra al hacer focus */
+}
+
+/* Estilos para el ícono de menú (líneas en cuadrícula) */
+.lni-grid-alt {
+    font-size: 1.5rem; /* Tamaño del ícono de 1.5 rem */
+    color: white; /* Color del ícono en blanco */
+}
+
+/* Estilos para el ícono de cierre (una X dentro de un círculo) */
+.lni-cross-circle {
+    font-size: 2rem; /* Tamaño del ícono de 2 rem */
+    color: white; /* Color del ícono en blanco */
+}
+
+/* Espacio placeholder debajo del header */
+.header-placeholder {
+    height: 30px; /* Altura del placeholder de 30px */
+}
+
+/* ----------------- Estilo de los enlaces de la navbar ----------------- */
+
+/* Estilos generales para los enlaces de la barra de navegación */
+.nav-link {
+    position: relative; /* Para permitir la pseudo-clase ::after */
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    padding-bottom: 5px; /* Espacio inferior de 5px para acomodar la línea inferior */
+}
+
+/* Estilos para la línea que aparece debajo del enlace al hacer hover */
+.nav-link::after {
+    content: ''; /* Crea un contenido vacío (la línea) */
+    position: absolute; /* Posicionamiento absoluto para que esté debajo del texto */
+    width: 0; /* Ancho inicial de la línea es 0 */
+    height: 1px; /* Grosor de la línea */
+    background-color: #ff3131; /* Color de la línea en rojo brillante */
+    left: 0; /* La línea comienza desde el lado izquierdo del enlace */
+    bottom: 0; /* La línea se coloca en la parte inferior del enlace */
+    transition: width 0.3s ease-in-out; /* Transición suave para el ancho de la línea */
+}
+
+/* Al hacer hover sobre el enlace, la línea se expande */
+.nav-link:hover::after {
+    width: 100%; /* La línea se expande para cubrir todo el ancho del enlace */
+}
+
+/* --------------------- Carousel - slider section -------------------------------- */
+.slider {
+    height: 100vh;
+    margin-top: 50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative; /* El slider se posiciona de manera relativa */
+}
+
+.slider .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0; /* La imagen cubre todo el contenedor */
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen se ajusta al contenedor sin perder proporciones */
+}
+
+.slider .list .item .content {
+    position: absolute;
+    top: 20%; /* La posición del contenido dentro del slider */
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el contenido horizontalmente */
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004; /* Sombra del texto */
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .title2 {
+    font-size: 5em; /* Tamaño grande para títulos */
+    font-weight: bold;
+    line-height: 1.3em;
+    font-family: "Dax Regular";
+}
+
+.slider .list .item .title2 {
+    color: #ff3131; 
+}
+
+.slider .list .item .content .description {
+    font-family: "MontserratAlternates-Regular";
+}
+
+.slider .list .item .button {
+    display: grid;
+    grid-template-columns: repeat(2, 130px); /*? Distribución de botones en dos columnas */
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.slider .list .item .button .sliderbutton {
+    color: #fff;
+    background-color: #ff3131; 
+}
+
+.slider .list .item .button .sliderbutton:hover {
+    color: #333;
+    background-color: #fff; 
+}
+
+/*  Thumbnail Section  */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%; /* Centra las miniaturas en la parte inferior del slider */
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px; /* Espaciado entre miniaturas */
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0; /* Evita que las miniaturas se reduzcan de tamaño */
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Bordes redondeados para las miniaturas */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Sombra para las miniaturas */
+}
+
+/*  Next/Prev Arrows Section  */
+.nextPrevArrows {
+    position: absolute;
+    top: 80%; /* Posición de las flechas de navegación */
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px; /* Espaciado entre las flechas */
+    align-items: center;
+}
+
+.nextPrevArrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Botones redondos */
+    background-color: #ff3131cd;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s; /* Transición suave al cambiar el estado */
+    cursor: pointer;
+}
+
+.nextPrevArrows button:hover {
+    background-color: #fff;
+    color: #000; 
+}
+
+/*  Animation Section  */
+.slider .list .item:nth-child(1) {
+    z-index: 1; /* Primer elemento del slider siempre en primer plano */
+}
+
+/* Animación del texto en el primer elemento */
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .title2,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0; /* Comienza con baja opacidad y desenfoque */
+    animation: showContent .5s 1s linear 1 forwards; /* Animación para mostrar contenido */
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1; /* Termina con opacidad completa y sin desenfoque */
+    }
+}
+
+.slider .list .item:nth-child(1) .content .title {
+    animation-delay: 0.4s !important; /* Retrasa la animación del título */
+}
+
+.slider .list .item:nth-child(1) .content .title2 {
+    animation-delay: 0.6s !important; /* Retrasa la animación del segundo título */
+}
+
+.slider .list .item:nth-child(1) .content .description {
+    animation-delay: 0.8s !important; /* Retrasa la animación de la descripción */
+}
+
+.slider .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1s !important; /* Retrasa la animación de los botones */
+}
+
+/* Animación para el clic del botón siguiente */
+.slider.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards; /* Animación para mostrar la imagen */
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0; /* Se ajusta la imagen a tamaño completo */
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura */
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0; /* Comienza con opacidad 0 y sin ancho */
+    }
+}
+
+.slider.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards; /* Animación al pasar a la siguiente miniatura */
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px); /* Desplaza la miniatura hacia la derecha */
+    }
+}
+
+/* Animación para el clic del botón anterior */
+.slider.prev .list .item:nth-child(2) {
+    z-index: 2; /* El segundo elemento se muestra en segundo plano */
+}
+
+.slider.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards; /* Animación al mover la imagen fuera de la vista */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%; /* La imagen vuelve a su tamaño reducido y posición */
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura al ir hacia atrás */
+}
+
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button {
+    pointer-events: none; /* Desactiva los botones mientras se realiza la animación */
+}
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .title2,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards !important; /* Animación para ocultar el contenido */
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0; /* El contenido se mueve hacia arriba y desaparece */
+    }
+}
+
+
+/* -------------------------------------- MET THE CAST --------------------------------- */
+
+/* Centra el título de la sección */
+.wrapper .title {
+    text-align: center;
+}
+
+/* Estiliza el título con fondo dorado, espaciado y sombreado */
+.title h4 {
+    display: inline-block;
+    background-color: #ffd700;
+    padding: 20px;
+    color: #333;
+    font-size: 30px;
+    font-family: "Dax Regular";
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    word-spacing: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+/* Contenedor de las tarjetas, usa flex para alinear y envolver las tarjetas */
+.wrapper .card_Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+/* Define las propiedades básicas de cada tarjeta, incluyendo sombra y borde redondeado */
+.card_Container .card {
+    position: relative;
+    width: 210px;
+    height: 280px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
+        inset 0 0 0 1000px rgba(67, 52, 109, .6);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Establece la imagen dentro de la tarjeta para ocupar todo el espacio */
+.card .imbBx,
+.imbBx img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenedor de contenido dentro de la tarjeta, inicialmente oculto fuera del área visible */
+.card .content {
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: bottom 0.5s;
+    transition-delay: 0.65s;
+}
+
+/* Al hacer hover sobre la tarjeta, el contenido se desplaza hacia arriba */
+.card:hover .content {
+    bottom: 0;
+    transition-delay: 0s;
+}
+
+/* Estiliza el título del contenido dentro de la tarjeta */
+.content .contentBx h3 {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Al hacer hover, el texto del contenido aparece suavemente */
+.card:hover .content .contentBx h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para el subtítulo (personaje) */
+.content .contentBx h3 span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+/* Estiliza los iconos de redes sociales dentro de la tarjeta */
+.content .sci {
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    text-align: center;
+}
+
+/* Estiliza cada ítem de redes sociales */
+.content .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.2s * var(--i));
+    text-align: center;
+}
+
+/* Al hacer hover sobre la tarjeta, los iconos de redes sociales aparecen */
+.card:hover .content .sci li {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Estilo de los enlaces de redes sociales (iconos) */
+.content .sci li a {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* ---------------------------------------Footer----------------------------------- */
+footer {
+    background-color: #192233;
+    /* Color de fondo del pie de página */
+    color: white;
+    width: 100%;
+    /* Color del texto en el pie de página */
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    /* Espaciado interno del pie de página */
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 1fr;
+    /* Una columna para el contenido del pie de página */
+    gap: 1rem;
+    /* Espacio entre elementos del pie de página */
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-logo img {
+    max-width: 300px;
+    /* Ancho máximo del logo */
+    display: grid;
+}
+
+.folow {
+    /* Contenedor principal para los íconos de redes sociales */
+    display: inline-flex;
+    /* Usa flexbox en línea para alinear los íconos horizontalmente */
+    list-style: none;
+    /* Elimina los puntos de lista predeterminados */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.folow .icon {
+    /* Estilo para cada ícono individual */
+    position: relative;
+    /* Permite el posicionamiento absoluto de los elementos hijos, como el tooltip */
+    background: #ffffff;
+    /* Color de fondo del ícono */
+    color: #333;
+    border-radius: 50%;
+    /* Hace que el ícono sea circular */
+    padding: 15px;
+    /* Espaciado interno alrededor del contenido del ícono */
+    margin: 10px;
+    /* Espacio entre los íconos */
+    width: 50px;
+    /* Ancho fijo del ícono */
+    height: 50px;
+    /* Altura fija del ícono */
+    font-size: 18px;
+    /* Tamaño de fuente para el contenido dentro del ícono */
+    display: flex;
+    /* Usa flexbox para alinear el contenido dentro del ícono */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    flex-direction: column;
+    /* Coloca el contenido en una columna */
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+    /* Sombra sutil alrededor del ícono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el ícono */
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Transición suave para los cambios de estilo */
+}
+
+.folow .tooltip {
+    /* Estilo para el tooltip que aparece al pasar el ratón sobre el ícono */
+    position: absolute;
+    /* Posiciona el tooltip en relación al ícono */
+    top: 0;
+    /* Posiciona el tooltip en la parte superior del ícono */
+    font-size: 14px;
+    /* Tamaño de fuente del texto del tooltip */
+    background: #ffffff;
+    /* Color de fondo del tooltip */
+    color: #ffffff;
+    /* Color del texto del tooltip */
+    padding: 5px 8px;
+    /* Espaciado interno del tooltip */
+    border-radius: 5px;
+    /* Bordes redondeados del tooltip */
+    box-shadow: 0 10px 10px rgba(118, 199, 242, 0.1);
+    /* Sombra alrededor del tooltip */
+    opacity: 0;
+    /* Tooltip oculto por defecto */
+    pointer-events: none;
+    /* Desactiva la interacción con el tooltip (para evitar que bloquee el puntero) */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Transición suave para la aparición del tooltip */
+}
+
+.folow .tooltip::before {
+    /* Estilo para la flecha del tooltip */
+    position: absolute;
+    /* Posiciona la flecha en relación al tooltip */
+    content: "";
+    /* Sin contenido visible, solo la forma */
+    height: 8px;
+    /* Altura de la flecha */
+    width: 8px;
+    /* Ancho de la flecha */
+    background: #ffffff;
+    /* Color de fondo de la flecha */
+    bottom: -3px;
+    /* Posiciona la flecha justo debajo del tooltip */
+    left: 50%;
+    /* Centra la flecha horizontalmente respecto al tooltip */
+    transform: translate(-50%) rotate(45deg);
+    /* Mueve la flecha a la posición central y la rota 45 grados para que apunte hacia arriba */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Transición suave para la apariencia de la flecha */
+}
+
+.folow .icon:hover .tooltip {
+    /* Muestra el tooltip al pasar el ratón sobre el ícono */
+    top: -45px;
+    /* Mueve el tooltip hacia arriba para que sea visible */
+    opacity: 1;
+    /* Hace visible el tooltip */
+    visibility: visible;
+    /* Asegura que el tooltip sea visible */
+    pointer-events: auto;
+    /* Habilita la interacción con el tooltip */
+}
+
+.folow .icon:hover span,
+.folow .icon:hover .tooltip {
+    /* Estilos adicionales cuando el ícono y el tooltip están en estado hover */
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra al texto del tooltip para mejorar la legibilidad */
+}
+
+/* Colores específicos para cada ícono de red social */
+.facebook {
+    --color: #1877f2;
+    /* Color de fondo para el ícono de Facebook */
+}
+
+.snapchat {
+    --color: #f9dd4d;
+    /* Color de fondo para el ícono de Snapchat */
+}
+
+.instagram {
+    --color: #e4405f;
+    /* Color de fondo para el ícono de Instagram */
+}
+
+.youtube {
+    --color: #cd201f;
+    /* Color de fondo para el ícono de YouTube */
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+    /* Cambia el color de fondo y del texto al pasar el ratón sobre el ícono */
+    background: var(--color);
+    /* Usa el color específico definido para cada ícono */
+    color: white;
+    /* Cambia el color del texto a blanco */
+}
+
+.folow .icon a {
+    display: block;
+    /* Hace que el enlace ocupe todo el espacio disponible */
+    width: 100%;
+    /* Ocupa el 100% del ancho del icono */
+    height: 100%;
+    /* Ocupa el 100% de la altura del icono */
+    text-decoration: none;
+    /* Elimina el subrayado del texto */
+    color: inherit;
+    /* Hereda el color del icono */
+    position: absolute;
+    /* Permite que el enlace se ajuste al contenedor */
+    top: 0;
+    /* Se alinea con el borde superior del contenedor */
+    left: 0;
+    /* Se alinea con el borde izquierdo del contenedor */
+}
+
+.footer-contact {
+    text-align: left;
+    /* Alinea el texto del formulario a la izquierda */
+}
+
+.footer-contact h2 {
+    margin-top: 0;
+    /* Elimina el margen superior del título del formulario */
+}
+
+.footer-contact form {
+    display: grid;
+    gap: 0.5rem;
+    /* Espacio entre los elementos del formulario */
+}
+
+.footer-contact label {
+    margin-top: 0.5rem;
+    /* Espacio superior en las etiquetas del formulario */
+}
+
+.footer-contact input,
+.footer-contact textarea {
+    width: 100%;
+    /* Ancho completo para los campos del formulario */
+    padding: 0.5rem;
+    /* Espaciado interno para los campos del formulario */
+    border: 1px solid #ddd;
+    /* Borde gris claro para los campos del formulario */
+    border-radius: 4px;
+    /* Bordes redondeados para los campos del formulario */
+}
+
+.footer-contact button {
+    padding: 0.5rem;
+    /* Espaciado interno para el botón */
+    border: none;
+    /* Elimina el borde del botón */
+    background-color: #FF3131;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 4px;
+    /* Bordes redondeados para el botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+.footer-contact button:hover {
+    background-color: #828080;
+    /* Color de fondo al pasar el ratón sobre el botón */
+}
+
+/* ------------------------- Characters Page ----------------------- */
+/* MAIN CHARACTERS */
+/* Estilos principales para la tarjeta de personajes */
+.character-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    /* Radio de borde redondeado para la tarjeta */
+    transition: transform 0.3s ease;
+    width: 90%;
+    /* Ajusta el ancho de la tarjeta */
+    max-width: 300px;
+    /* Ajusta el ancho máximo de la tarjeta */
+    margin: 0 auto;
+    /* Centra la tarjeta horizontalmente */
+}
+
+/* Estilo para el título de la sección de personajes */
+.container .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para que el enlace ocupe toda la tarjeta y sin decoración */
+.character-card-link {
+    text-decoration: none;
+    /* Elimina la decoración (subrayado) del enlace */
+    display: block;
+    /* Hace que el enlace ocupe todo el espacio de la tarjeta */
+    color: inherit;
+    /* Hereda el color de los elementos hijos */
+}
+
+/* Asegura que no haya decoración en los textos al pasar el cursor */
+.character-card-link:hover,
+.character-card-link h3,
+.character-card-link p {
+    text-decoration: none;
+    color: inherit;
+    /* Asegura que el color no cambie con el enlace */
+}
+
+/* Estilos para la imagen dentro de la tarjeta */
+.character-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    /* Añade una transición suave al cambiar el estado */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Contenedor de la información del personaje */
+.character-info {
+    position: relative;
+    height: 40%;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 5px solid red;
+    /* Borde superior rojo */
+    transition: background-color 0.6s ease;
+    z-index: 1;
+    /* Controla la profundidad en el apilamiento de elementos */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Efecto antes del hover, el pseudo-elemento estará oculto inicialmente */
+.character-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transform: scaleY(0);
+    /* Escala vertical oculta */
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    z-index: -1;
+    /* Sitúa el pseudo-elemento detrás del contenido */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Al hacer hover sobre la tarjeta, el pseudo-elemento se muestra */
+.character-card:hover .character-info::before {
+    transform: scaleY(1);
+    /* Escala vertical completa */
+}
+
+/* Cambia el color de fondo y texto al hacer hover */
+.character-card:hover .character-info {
+    background-color: red;
+    color: white;
+}
+
+/* Estilo para el nombre del personaje */
+.character-name {
+    font-size: 1.2rem;
+    /* Tamaño de fuente ajustado */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Estilo para el nombre del actor */
+.actor-name {
+    font-size: 0.8rem;
+    /* Tamaño de fuente ajustado */
+    color: #ddd;
+    text-align: center;
+}
+
+/* Secondary characters */
+
+/* Asegura que el modal ocupe el 100% del alto de la pantalla */
+.modal-fullscreen {
+    max-height: 100vh;
+}
+
+/* Evita el scroll dentro del cuerpo del modal */
+.modal-body {
+    overflow: hidden;
+}
+
+
+/* ---------------------------- personaje individual --------------------- */
+.character-header {
+    text-align: center;
+}
+
+.character-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.iconic-quotes,
+.fun-facts {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+.iconic-quotes h2,
+.fun-facts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.quote-item {
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.quote-item:before {
+    content: "“";
+    font-size: 2rem;
+    color: #ff3131;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fact-item {
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.fact-item:before {
+    content: "*";
+    font-size: 2rem;
+    color: #ff3131;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*the mother*/
+.list-group-item {
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    background-color: #ff3131;
+    border: none;
+}
+
+.text-muted {
+    font-size: 1.25rem;
+}
+
+
+/* -------------------------------------- Episodes Page ----------------- */
+/* Espaciado para las secciones */
+.tab-content {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    background-color: #fff;
+}
+
+/* Efecto hover para los botones */
+.btn-primary {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Personalización para tarjetas */
+/* styles.css */
+.card-text {
+    position: relative;
+}
+
+.card-text span {
+    display: none;
+}
+
+.card-text.show-more span {
+    display: inline;
+}
+
+/* Cambia el color de las pestañas inactivas */
+.nav-tabs .nav-link {
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #f8f8f8;
+    margin: .5px;
+}
+
+/* Cambiar el color de la pestaña activa */
+.nav-tabs .nav-link.active {
+    background-color: #192233;
+    color: #fff;
+    border: #192233;
+    margin: .5px;
+}
+
+/* Cambiar el color de fondo y el color del texto de los botones primarios */
+.btn-primary {
+    background-color: #ff3131;
+    border-color: #ff3131;
+    color: #ffffff;
+}
+
+/* Cambiar el color de fondo y el color del texto de los botones al pasar el cursor */
+.btn-primary:hover {
+    background-color: #333333cd;
+    border-color: #333333cd;
+    color: #ffffff;
+}
+
+.nav-item {
+    margin: 5px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    /* Centra las solapas horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que las solapas se ajusten en varias filas si son demasiadas */
+}
+
+.img-fluid {
+    border-radius: 5px;
+}
+
+
+/* ---------------------------- MULTIMEDIA PAGE ---------------------------------- */
+.gallery-item {
+    position: relative;
+}
+.gallery-item img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+.modal-dialog {
+    max-width: 90%;
+}
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-body img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --------------------------- legendary Page ------------------------------- */
+.moment-card {
+    cursor: pointer;
+    text-align: center;
+}
+.moment-card img {
+    width: 100%;
+    height: auto;
+}
+.moment-title {
+    margin-top: 10px;
+}
+
+.rounded-table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+/* Cambiar el color de fondo del encabezado del acordeón activo */
+.accordion-button:not(.collapsed) {
+    background-color: #333333cd; /* Color de fondo deseado para el botón activo */
+    color: #fff; /* Color del texto para el botón activo */
+    border-color: #dee2e6; /* Color del borde para el botón activo (opcional) */
+}
+
+
+
+/* --------------------RESPONSIVE---------------------------*/
+
+/* Slider */
+@media screen and (max-width: 678px) {
+    .slider .list .item .content {
+        padding-right: 0;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 50px;
+    }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+

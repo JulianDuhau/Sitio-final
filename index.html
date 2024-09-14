@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMYM.fans</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/icons/favicon-16x16.png" type="image/x-icon">
+    <!-- Iconos de redes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icono de menu navbar -->    
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Hoja de estilos -->    
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!------------------------------HEADER--------------------------------------------->
+    <header>
+        <nav class="navbar navbar-expand-lg py-4 py-lg-0 fixed-top">
+            <div class="container px-4">
+                <img class="logo" src="./assets/icons/logositioweb2.png" alt="Logo del sitio">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#top-navbar" aria-controls="top-navbar">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
+                    <!--navigation bar content-->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#top-navbar" aria-controls="top-navbar">
+                        <div class="d-flex justify-content-between p-3">
+                            <img class="logo" src="./assets/icons/logositioweb2.png" alt="logo del sitio">
+                            <i class="lni lni-cross-circle"></i>
+                        </div>
+                    </button>
+                    <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./pages/characters.html">Characters</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./pages/episodes.html">Episodes</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./pages/legendary.html">Legendary</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./pages/multimedia.html">Multimedia</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="#contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="header-placeholder"></div>
+    <!-- carousel-->
+     <!--! utilicé js para este caso porque no me convencian los slider de bootstrap-->
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="./assets/img/bannercharacters.svg" alt="Characters Banner">
+                <div class="content">
+                    <div class="title">HAVE YOU</div>
+                    <div class="title2">MET TED</div>
+                    <div class="description">
+                        Meet the Most Iconic Characters of How I Met Your Mother! Discover the unique stories and
+                        personalities of Ted, Robin, Barney, Lily, and Marshall. Click to explore their profiles and
+                        relive the best moments!
+                    </div>
+                    <div class="button">
+                        <a href="./pages/characters.html"><button class="btn btn-primary me-2 sliderbutton">SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./assets/img/bannerguest.svg" alt="Suit Up Banner">
+                <div class="content">
+                    <div class="title">SUIT</div>
+                    <div class="title2">UP!</div>
+                    <div class="description">
+                        Meet the Guest Stars of How I Met Your Mother! Discover the memorable cameos and standout
+                        performances that added extra magic to the show. Click to see who made a special appearance!
+                    </div>
+                    <div class="button">
+                        <a href="./pages/characters.html#Guest-star"><button class="btn btn-primary me-2 sliderbutton">SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./assets/img/bannerlegendary.svg" alt="Legendary Banner">
+                <div class="content">
+                    <div class="title">LEGEN </div>
+                    <div class="title2">DARY!</div>
+                    <div class="description">
+                        Relive the Legendary Moments of How I Met Your Mother! Explore the unforgettable scenes and
+                        iconic lines that made the series a classic. Click to revisit the moments that defined the
+                        show!.
+                    </div>
+                    <div class="button">
+                        <a href="./pages/legendary.html"><button class="btn btn-primary me-2 sliderbutton">SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./assets/img/bannermultimedia.svg" alt="Multimedia Banner">
+                <div class="content">
+                    <div class="title">SLAP</div>
+                    <div class="title2">BET</div>
+                    <div class="description">
+                        I bet you’ll love this section as much as a slap bet!
+                        Dive into the Multimedia area to relive the most iconic moments of How I Met Your Mother.
+                        Check out videos and photos that capture the epic showdown and more!
+                    </div>
+                    <div class="button">
+                        <a href="./pages/multimedia.html"><button class="btn btn-primary me-2 sliderbutton">SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thumbnail">
+            <div class="item">
+                <img src="./assets/img/bannercharacters.svg" alt="Characters Banner">
+            </div>
+            <div class="item">
+                <img src="./assets/img/bannerguest.svg" alt="Suit Up Banner">
+            </div>
+            <div class="item">
+                <img src="./assets/img/bannerlegendary.svg" alt="Legendary Banner">
+            </div>
+            <div class="item">
+                <img src="./assets/img/bannermultimedia.svg" alt="Multimedia Banner">
+            </div>
+        </div>
+
+        <div class="nextPrevArrows">
+            <button class="prev">
+                < </button>
+                    <button class="next"> > </button>
+        </div>
+
+    </div>
+
+<!-- Met the cast -->
+    <div class="wrapper">
+        <div class="placeholder"></div>
+        <div class="title">
+            <h4>Met the Cast</h4>
+        </div>
+        <div class="card_Container">
+
+            <div class="card">
+                <div class="imbBx">
+                    <img src="./assets/img/josh-ted.jpg" alt="Josh Image">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Josh Radnor <br><span>Ted Mosby</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="https://www.instagram.com/joshradnor/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="https://www.facebook.com/JoshRadnor" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="https://x.com/JoshRadnor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imbBx">
+                    <img src="./assets/img/cobie-robin.jpg" alt="Cobie Image">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Cobie Smulders <br><span>Robin Scherbatsky</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="https://www.instagram.com/cobiesmulders/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="https://www.facebook.com/CobieSmuldersofficial" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="https://x.com/CobieSmulders" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imbBx">
+                    <img src="./assets/img/neil-barney.jpg" alt="Barney Image">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Neil Patrick Harris <br><span>Barney Stinson</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="https://www.instagram.com/nph/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="https://www.facebook.com/Nph" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="https://x.com/ActuallyNPH" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imbBx">
+                    <img src="./assets/img/alyson-lily.jpg" alt="Alyson Image">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Alyson Hannigan <br><span>Lily Aldrin</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="https://www.instagram.com/alysonhannigan/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="https://www.facebook.com/AlysonHannigan" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="https://twitter.com/AlysonHannigan" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imbBx">
+                    <img src="./assets/img/jason-marshall.jpg" alt="Marshall Image">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Jason Segel <br><span> Marshal Eriksen</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="https://www.instagram.com/jasonsegel/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="https://www.facebook.com/jasonsegel" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li style="--i: 3">
+                            <a href="https://twitter.com/jasonsegel" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Backstage Images Section -->
+<section id="backstage" class="container my-5">
+    <div class="title">
+        <h4>Backstage Moments</h4>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-1.svg" class="card-img-top" alt="Backstage Photo 1">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-2.svg" class="card-img-top" alt="Backstage Photo 2">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-3.svg" class="card-img-top" alt="Backstage Photo 3">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-4.svg" class="card-img-top" alt="Backstage Photo 3">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-5.svg" class="card-img-top" alt="Backstage Photo 3">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="./assets/img/back-6.svg" class="card-img-top" alt="Backstage Photo 3">
+            </div>
+        </div>
+        <!--! more -->
+    </div>
+</section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/icons/logositioweb2.png" alt="Logo" />
+            </div>
+            <div>
+                <ul class="folow">
+                    <li class="icon facebook">
+                        <a href="http://www.facebook.com"></a>
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </li>
+                    <li class="icon snapchat">
+                        <a href="http://www.snapchat.com"></a>
+                        <span class="tooltip">Snapchat</span>
+                        <span><i class="fab fa-snapchat"></i></span>
+                    </li>
+                    <li class="icon instagram">
+                        <a href="http://www.instagram.com"></a>
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </li>
+                    <li class="icon youtube">
+                        <a href="http://www.youtube.com"></a>
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <!-- Sección de contacto -->
+                <section id="contact-us">
+                    <form action="#" method="post">
+                        <input type="text" id="name" name="name" placeholder="Name" required />
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                        <textarea id="message" name="message" rows="4" placeholder="your message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2024 HIMYM Fans. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/slider.js"></script>
+</body>
+
+</html>

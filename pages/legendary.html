@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMYM.fans</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/icons/favicon-16x16.png" type="image/x-icon">
+    <!-- icons de redes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icono de menu de navbar -->    
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg py-4 py-lg-0 fixed-top">
+            <div class="container px-4">
+                <a href="../index.html"><img class="logo" src="../assets/icons/logositioweb2.png"
+                        alt="Logo del sitio"></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#top-navbar" aria-controls="top-navbar">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
+                    <!--navigation bar content-->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#top-navbar" aria-controls="top-navbar">
+                        <div class="d-flex justify-content-between p-3">
+                            <img class="logo" src="../assets/icons/logositioweb2.png" alt="logo del sitio">
+                            <i class="lni lni-cross-circle"></i>
+                        </div>
+                    </button>
+                    <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./characters.html">Characters</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./episodes.html">Episodes</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./legendary.html">Legendary</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="./multimedia.html">Multimedia</a>
+                        </li>
+                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
+                            <a class="nav-link" href="#contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="header-placeholder"></div>
+
+
+
+    <section class="container my-5">
+        <div class="placeholder"></div>
+        <div class="title">
+            <h4>Legendary Moments</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment1Modal">
+                    <img src="../assets/img/legendary-1.svg" class="img-fluid" alt="Moment 1">
+                    <h5 class="moment-title">The First Night Ted Meets Robin</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment2Modal">
+                    <img src="../assets/img/legendary-2.svg" class="img-fluid" alt="Moment 2">
+                    <h5 class="moment-title">Barney Proposes to Robin</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment3Modal">
+                    <img src="../assets/img/legendary-3.svg" class="img-fluid" alt="Moment 3">
+                    <h5 class="moment-title">Ted Meets the Mother</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment4Modal">
+                    <img src="../assets/img/legendary-4.svg" class="img-fluid" alt="Moment 4">
+                    <h5 class="moment-title">Barney Officiates Lily and Marshall's Wedding</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment5Modal">
+                    <img src="../assets/img/legendary-5.svg" class="img-fluid" alt="Moment 5">
+                    <h5 class="moment-title">Slap Bet</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="moment-card" data-bs-toggle="modal" data-bs-target="#moment6Modal">
+                    <img src="../assets/img/legendary-6.svg" class="img-fluid" alt="Moment 6">
+                    <h5 class="moment-title">The Pineapple Incident</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="moment1Modal" tabindex="-1" aria-labelledby="moment1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment1Label">The First Night Ted Meets Robin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-1.svg" class="img-fluid" alt="Moment 1">
+                        <p>On the pilot episode of <i>How I Met Your Mother</i>, Ted Mosby meets Robin Scherbatsky for
+                            the first time at MacLaren's Pub. This chance encounter happens after Ted's heartbreak from
+                            his recent breakup. Robin’s charm and confidence immediately capture Ted’s attention, and he
+                            is struck by her uniqueness and allure. This meeting sets off a chain of events that
+                            significantly impact Ted’s life and the dynamics within the friend group.</p>
+
+                        <p>Despite the strong connection they share, Robin is not "the mother" of Ted's future children.
+                            However, their relationship evolves into a deep friendship and a complex romantic history
+                            that shapes much of the series. This initial meeting is crucial as it introduces one of the
+                            central characters in Ted’s life and sets the stage for many significant moments throughout
+                            the show.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="moment2Modal" tabindex="-1" aria-labelledby="moment2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment2Label">Barney Proposes to Robin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-2.svg" class="img-fluid" alt="Moment 2">
+                        <p>In a memorable and emotional moment, Barney Stinson proposes to Robin Scherbatsky in the
+                            season 9 episode "The Locket." After a series of ups and downs in their relationship, Barney
+                            decides to take the plunge and ask Robin to marry him. He orchestrates a grand gesture by
+                            leading Robin to the rooftop of their favorite bar, where he has set up a romantic scene
+                            with candles and flowers. Despite the unconventional nature of Barney's approach, his
+                            heartfelt words and sincere emotions shine through, making it a deeply moving proposal.
+                            Robin, overwhelmed by Barney's commitment and love, accepts, marking a significant and
+                            poignant moment in their relationship</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="moment3Modal" tabindex="-1" aria-labelledby="moment3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment3Label">Ted Meets the Mother</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-3.svg" class="img-fluid" alt="Moment 3">
+                        <p>In a touching and pivotal scene from the series finale, Ted Mosby meets Tracy McConnell, the
+                            mother of his children, at the Farhampton train station. After nine seasons of searching for
+                            "the one," Ted encounters Tracy under a yellow umbrella, a symbol that has been woven
+                            throughout the series. Their meeting is both heartwarming and serendipitous, as Tracy is
+                            revealed to be the perfect match Ted has been waiting for. This moment not only concludes
+                            Ted's long journey but also begins a new chapter of love and happiness, bringing the series
+                            full circle with a deeply satisfying and emotional resolution.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="moment4Modal" tabindex="-1" aria-labelledby="moment4Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment4Label">Barney Officiates Lily and Marshall's Wedding</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-4.svg" class="img-fluid" alt="Moment 4">
+                        <p>In a memorable and comedic twist, Barney Stinson becomes the officiant for Lily Aldrin and
+                            Marshall Eriksen's wedding in the season 8 episode "Something Old." Despite his usual charm
+                            and questionable morals, Barney embraces the role with surprising sincerity and enthusiasm.
+                            His heartfelt and humorous vows, combined with his unexpected dedication to the ceremony,
+                            make it a unique and touching moment in the series. Barney's involvement highlights the
+                            depth of his friendship with Lily and Marshall, adding an extra layer of significance and
+                            humor to their special day.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="moment5Modal" tabindex="-1" aria-labelledby="moment5Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment5Label">Slap Bet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-5.svg" class="img-fluid" alt="Moment 5">
+                        <p>The "Slap Bet" is a memorable subplot from the season 2 episode "Slap Bet," which revolves
+                            around a humorous wager between Barney Stinson and Marshall Eriksen. The bet begins when
+                            Marshall and Barney argue over a mysterious secret related to Robin Scherbatsky's past.
+                            Barney, eager to uncover the secret, challenges Marshall to a slap bet, where the loser must
+                            endure a slap from the winner. The stakes and the slap are revealed in later episodes, with
+                            the slap bet becoming a recurring and hilarious element throughout the series. This subplot
+                            showcases the show's trademark humor and the enduring camaraderie between the characters.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="moment6Modal" tabindex="-1" aria-labelledby="moment6Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="moment6Label">The Pineapple Incident</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../assets/img/legendary-6.svg" class="img-fluid" alt="Moment 6">
+                        <p>In the episode "The Pineapple Incident" from season 1, Ted Mosby experiences a wild and
+                            unforgettable night that starts with a mysterious pineapple and ends with a series of
+                            hilarious and confusing events. After a drunken night out, Ted wakes up to find a pineapple
+                            on his nightstand, with no memory of how it got there or the events that led up to it. The
+                            episode follows Ted and his friends as they piece together the night, unraveling a series of
+                            funny and bizarre incidents. The pineapple becomes a symbol of Ted's chaotic and
+                            unpredictable night, making it a standout and iconic moment in the series.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Playbook Section -->
+    <section class="container my-5">
+        <div class="title">
+            <h4>Playbook</h4>
+        </div>
+        <div class="accordion" id="playbookAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse1" aria-expanded="true" aria-controls="playbookCollapse1">
+                        The Lemon Law
+                    </button>
+                </h2>
+                <div id="playbookCollapse1" class="accordion-collapse collapse show custom shor-acordeon" aria-labelledby="playbookHeading1"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        The Lemon Law is a rule Barney uses to escape bad dates. If the date is going poorly, he can use
+                        the "Lemon Law" to end it quickly, based on the principle that no one should have to endure a
+                        bad date when there are other options available.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse2" aria-expanded="false" aria-controls="playbookCollapse2">
+                        The Naked Man
+                    </button>
+                </h2>
+                <div id="playbookCollapse2" class="accordion-collapse collapse" aria-labelledby="playbookHeading2"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        The Naked Man is a bold strategy where Barney, after a date goes well, tries to take things to
+                        the next level by getting naked. According to Barney, this move can be surprisingly effective,
+                        leading to memorable and often comedic results.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse3" aria-expanded="false" aria-controls="playbookCollapse3">
+                        The 90/10 Rule
+                    </button>
+                </h2>
+                <div id="playbookCollapse3" class="accordion-collapse collapse" aria-labelledby="playbookHeading3"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        The 90/10 Rule is Barney's philosophy that in relationships, you should focus on the 90% that
+                        you like and overlook the 10% that you don’t. This approach helps him stay positive and not get
+                        bogged down by minor flaws.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse4" aria-expanded="false" aria-controls="playbookCollapse4">
+                        The Reverse Play
+                    </button>
+                </h2>
+                <div id="playbookCollapse4" class="accordion-collapse collapse" aria-labelledby="playbookHeading4"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        Use the tactic of appearing less interested to spark the other person’s interest. The idea is
+                        that by acting distant, you become more attractive.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse5" aria-expanded="false" aria-controls="playbookCollapse5">
+                        The Vicky
+                    </button>
+                </h2>
+                <div id="playbookCollapse5" class="accordion-collapse collapse" aria-labelledby="playbookHeading5"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        Involves talking about a fictional "friend" or past relationship to make the person you’re
+                        interested in jealous. The idea is that this can increase their interest in you.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="playbookHeading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#playbookCollapse5" aria-expanded="false" aria-controls="playbookCollapse5">
+                        The Ted Mosby
+                    </button>
+                </h2>
+                <div id="playbookCollapse5" class="accordion-collapse collapse" aria-labelledby="playbookHeading5"
+                    data-bs-parent="#playbookAccordion">
+                    <div class="accordion-body">
+                        This is a move Barney uses to try to win someone over by imitating Ted Mosby. It often involves
+                        using a more genuine and sincere approach.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Bro Code Section -->
+
+    <section class="container my-5">
+        <div class="title">
+            <h4>The Bro Code</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered rounded-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Rule</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bro before Hoes</td>
+                        <td>Your bro comes first, even if it means ditching a date or relationship for the sake of a friendship.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>A Bro is Always Entitled to Do Something Stupid, as Long as the Bro is Doing It in the Presence of Another Bro</td>
+                        <td>You can act foolish or make mistakes, but only if another bro is there to back you up.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>If a Bro Gives You a Bro-Down on a Girl, You Have to Respect That</td>
+                        <td>If a bro gives you information about a girl he's interested in, you must respect it and not pursue her.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>A Bro Will Never Date a Bro’s Ex-Girlfriend</td>
+                        <td>You should not date or pursue a girl who was previously in a relationship with your bro.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>The Bro Code is Like a Woman’s Vagina—It’s Meant to Be Open and Respectful, but Never Talked About</td>
+                        <td>The Bro Code should be adhered to without discussion or over-explanation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../assets/icons/logositioweb2.png" alt="Logo" />
+            </div>
+            <div>
+                <ul class="folow">
+                    <li class="icon facebook">
+                        <a href="http://www.facebook.com"></a>
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </li>
+                    <li class="icon snapchat">
+                        <a href="http://www.snapchat.com"></a>
+                        <span class="tooltip">Snapchat</span>
+                        <span><i class="fab fa-snapchat"></i></span>
+                    </li>
+                    <li class="icon instagram">
+                        <a href="http://www.instagram.com"></a>
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </li>
+                    <li class="icon youtube">
+                        <a href="http://www.youtube.com"></a>
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <!-- Sección de contacto -->
+                <section id="contact-us">
+                    <form action="#" method="post">
+                        <input type="text" id="name" name="name" placeholder="Name" required />
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                        <textarea id="message" name="message" rows="4" placeholder="your message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2024 HIMYM Fans. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9sjtS3mR9+Kt5l/tF58Fz6mxMlg7FhDJK5XsNEUSuDh95BIs4r4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
