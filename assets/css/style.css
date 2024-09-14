@@ -734,10 +734,6 @@ footer {
     /* Alinea el texto del formulario a la izquierda */
 }
 
-.footer-contact h2 {
-    margin-top: 0;
-    /* Elimina el margen superior del título del formulario */
-}
 
 .footer-contact form {
     display: grid;
