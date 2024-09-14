@@ -549,6 +549,7 @@ footer {
     gap: 1rem;
     /* Espacio entre elementos del pie de página */
     font-family: "Poppins", sans-serif;
+
 }
 
 .footer-content {
@@ -1140,4 +1141,11 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 940px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 
