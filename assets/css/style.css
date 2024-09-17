@@ -1081,10 +1081,13 @@ footer {
 }
 
 .modal-body img {
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
+
 
 /* --------------------------- legendary Page ------------------------------- */
 .moment-card {
@@ -1120,7 +1123,7 @@ footer {
 /* --------------------RESPONSIVE---------------------------*/
 
 /* Slider */
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
     .slider .list .item .content {
         padding-right: 0;
     }
@@ -1134,6 +1137,20 @@ footer {
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
+    }
+}
+
+/*multimedia page*/
+
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .modal-dialog.modal-lg {
+        max-width: 90%; /* Ajustar el ancho del modal en pantallas móviles */
+    }
+    
+    .modal-body img {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del modal en mobile */
     }
 }
 
