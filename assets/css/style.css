@@ -510,30 +510,31 @@ header {
     border-radius: 15px;
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
 }
 
-/* Contenedor de las tarjetas */
+/* Contenedor de las tarjetas, usa flex para alinear y envolver las tarjetas */
 .wrapper .card_Container {
+    position: relative;
     display: flex;
-    justify-content: space-evenly; /* Alinea las tarjetas a la izquierda */
-    padding: 10px 5px; /* Espacio alrededor del contenedor */
-    overflow-x: auto; /* Permite el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Habilita el scroll snap */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
 }
 
-/* Define las propiedades básicas de cada tarjeta */
+/* Define las propiedades básicas de cada tarjeta, incluyendo sombra y borde redondeado */
 .card_Container .card {
-    flex: 0 0 auto; /* Mantiene las tarjetas en línea y les permite crecer según su tamaño */
-    width: 210px; /* Ancho de las tarjetas */
-    height: 280px; /* Altura de las tarjetas */
-    margin: 10px; /* Espaciado entre las tarjetas */
+    position: relative;
+    width: 210px;
+    height: 280px;
+    margin: 20px;
     overflow: hidden;
     box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
-        inset 0 0 0 1000px rgba(67, 52, 109, 0.6);
+        inset 0 0 0 1000px rgba(67, 52, 109, .6);
     border-radius: 15px;
     display: flex;
-    flex-direction: column; /* Mantiene el contenido verticalmente alineado */
-    scroll-snap-align: start; /* Alinea cada tarjeta al inicio en el scroll snap */
+    justify-content: center;
 }
 
 /* Establece la imagen dentro de la tarjeta para ocupar todo el espacio */
@@ -543,7 +544,7 @@ header {
     height: 100%;
 }
 
-/* Contenedor de contenido dentro de la tarjeta */
+/* Contenedor de contenido dentro de la tarjeta, inicialmente oculto fuera del área visible */
 .card .content {
     position: absolute;
     bottom: -160px;
@@ -626,7 +627,6 @@ header {
     color: #fff;
     font-size: 24px;
 }
-
 
 /* ---------- Banner de Streaming ----------- */
 .streaming-banner {
@@ -1333,11 +1333,16 @@ footer {
 
 
 /* met the cast */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .wrapper .card_Container {
-        padding: 10px; /* Ajusta el padding si es necesario */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
     }
+
     .card_Container .card {
-        margin: 5px; /* Reduce el margen entre tarjetas */
+        width: 160px; /* Ajusta el tamaño de las tarjetas para que se adapten mejor en pantallas pequeñas */
+        height: auto;
     }
 }
