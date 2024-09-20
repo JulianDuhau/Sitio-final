@@ -46,91 +46,122 @@ body p {
 
 /* Estilos para el header de la página */
 header {
-    background: #192233; /* Fondo de color oscuro */
+    background: #192233;
+    /* Fondo de color oscuro */
 }
 
 /* Estilos para el logo en el header */
 .logo {
-    max-width: 150px; /* Limita el tamaño máximo del logo a 150px */
+    max-width: 150px;
+    /* Limita el tamaño máximo del logo a 150px */
 }
 
 /* Estilos para la barra de navegación */
 .navbar {
-    background-color: #192233; /* Fondo oscuro que coincide con el header */
+    background-color: #192233;
+    /* Fondo oscuro que coincide con el header */
 }
 
 /* Estilos para los enlaces en la barra de navegación */
 .navbar-nav .nav-link {
-    color: white; /* Texto en color blanco */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    font-family: "Dax Regular"; /* Usa la fuente 'Dax Regular' */
-    margin: 0 10px 0 10px; /* Margen horizontal de 10px entre los enlaces */
+    color: white;
+    /* Texto en color blanco */
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas */
+    font-family: "Dax Regular";
+    /* Usa la fuente 'Dax Regular' */
+    margin: 0 10px 0 10px;
+    /* Margen horizontal de 10px entre los enlaces */
 }
 
 /* Estilos para el offcanvas (menú desplegable en dispositivos móviles) */
 .offcanvas {
-    background-color: #192233; /* Fondo oscuro en el offcanvas */
-    text-align: center; /* Centra el texto */
+    background-color: #192233;
+    /* Fondo oscuro en el offcanvas */
+    text-align: center;
+    /* Centra el texto */
 }
 
 /* Estilos para los enlaces dentro del menú offcanvas */
 .offcanvas .nav-link {
-    color: white; /* Texto en blanco */
+    color: white;
+    /* Texto en blanco */
 }
 
 /* Corregir la clase mal escrita (cambiar .nav-limk a .nav-link) */
 .nav-link {
-    font-weight: 600; /* Hace el texto más grueso (negrita) */
-    color: #333; /* Color del texto en gris oscuro */
+    font-weight: 600;
+    /* Hace el texto más grueso (negrita) */
+    color: #333;
+    /* Color del texto en gris oscuro */
 }
 
 /* Elimina el contorno que aparece al hacer clic en el botón del menú en móviles */
 .navbar-toggler:focus {
-    box-shadow: none; /* Sin sombra al hacer focus */
+    box-shadow: none;
+    /* Sin sombra al hacer focus */
 }
 
 /* Estilos para el ícono de menú (líneas en cuadrícula) */
 .lni-grid-alt {
-    font-size: 1.5rem; /* Tamaño del ícono de 1.5 rem */
-    color: white; /* Color del ícono en blanco */
+    font-size: 1.5rem;
+    /* Tamaño del ícono de 1.5 rem */
+    color: white;
+    /* Color del ícono en blanco */
 }
 
 /* Estilos para el ícono de cierre (una X dentro de un círculo) */
 .lni-cross-circle {
-    font-size: 2rem; /* Tamaño del ícono de 2 rem */
-    color: white; /* Color del ícono en blanco */
+    font-size: 2rem;
+    /* Tamaño del ícono de 2 rem */
+    color: white;
+    /* Color del ícono en blanco */
 }
 
 /* Espacio placeholder debajo del header */
 .header-placeholder {
-    height: 30px; /* Altura del placeholder de 30px */
+    height: 30px;
+    /* Altura del placeholder de 30px */
 }
 
 /* ----------------- Estilo de los enlaces de la navbar ----------------- */
 
 /* Estilos generales para los enlaces de la barra de navegación */
 .nav-link {
-    position: relative; /* Para permitir la pseudo-clase ::after */
-    color: #ffffff; /* Color de texto blanco */
-    text-decoration: none; /* Sin subrayado en los enlaces */
-    padding-bottom: 5px; /* Espacio inferior de 5px para acomodar la línea inferior */
+    position: relative;
+    /* Para permitir la pseudo-clase ::after */
+    color: #ffffff;
+    /* Color de texto blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    padding-bottom: 5px;
+    /* Espacio inferior de 5px para acomodar la línea inferior */
 }
 
 /* Estilos para la línea que aparece debajo del enlace al hacer hover */
 .nav-link::after {
-    content: ''; /* Crea un contenido vacío (la línea) */
-    position: absolute; /* Posicionamiento absoluto para que esté debajo del texto */
-    width: 0; /* Ancho inicial de la línea es 0 */
-    height: 1px; /* Grosor de la línea */
-    background-color: #ff3131; /* Color de la línea en rojo brillante */
-    left: 0; /* La línea comienza desde el lado izquierdo del enlace */
-    bottom: 0; /* La línea se coloca en la parte inferior del enlace */
-    transition: width 0.3s ease-in-out; /* Transición suave para el ancho de la línea */
+    content: '';
+    /* Crea un contenido vacío (la línea) */
+    position: absolute;
+    /* Posicionamiento absoluto para que esté debajo del texto */
+    width: 0;
+    /* Ancho inicial de la línea es 0 */
+    height: 1px;
+    /* Grosor de la línea */
+    background-color: #ff3131;
+    /* Color de la línea en rojo brillante */
+    left: 0;
+    /* La línea comienza desde el lado izquierdo del enlace */
+    bottom: 0;
+    /* La línea se coloca en la parte inferior del enlace */
+    transition: width 0.3s ease-in-out;
+    /* Transición suave para el ancho de la línea */
 }
 
 /* Al hacer hover sobre el enlace, la línea se expande */
 .nav-link:hover::after {
-    width: 100%; /* La línea se expande para cubrir todo el ancho del enlace */
+    width: 100%;
+    /* La línea se expande para cubrir todo el ancho del enlace */
 }
 
 /* --------------------- Carousel - slider section -------------------------------- */
@@ -139,45 +170,52 @@ header {
     margin-top: 50px;
     width: 100vw;
     overflow: hidden;
-    position: relative; /* El slider se posiciona de manera relativa */
+    position: relative;
+    /* El slider se posiciona de manera relativa */
 }
 
 .slider .list .item {
     width: 100%;
     height: 100%;
     position: absolute;
-    inset: 0 0 0 0; /* La imagen cubre todo el contenedor */
+    inset: 0 0 0 0;
+    /* La imagen cubre todo el contenedor */
 }
 
 .slider .list .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen se ajusta al contenedor sin perder proporciones */
+    object-fit: cover;
+    /* La imagen se ajusta al contenedor sin perder proporciones */
 }
 
 .slider .list .item .content {
     position: absolute;
-    top: 20%; /* La posición del contenido dentro del slider */
+    top: 20%;
+    /* La posición del contenido dentro del slider */
     width: 1140px;
     max-width: 80%;
     left: 50%;
-    transform: translateX(-50%); /* Centra el contenido horizontalmente */
+    transform: translateX(-50%);
+    /* Centra el contenido horizontalmente */
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004; /* Sombra del texto */
+    text-shadow: 0 5px 10px #0004;
+    /* Sombra del texto */
 }
 
 .slider .list .item .content .title,
 .slider .list .item .content .title2 {
-    font-size: 5em; /* Tamaño grande para títulos */
+    font-size: 5em;
+    /* Tamaño grande para títulos */
     font-weight: bold;
     line-height: 1.3em;
     font-family: "Dax Regular";
 }
 
 .slider .list .item .title2 {
-    color: #ff3131; 
+    color: #ff3131;
 }
 
 .slider .list .item .content .description {
@@ -186,7 +224,8 @@ header {
 
 .slider .list .item .button {
     display: grid;
-    grid-template-columns: repeat(2, 130px); /*? Distribución de botones en dos columnas */
+    grid-template-columns: repeat(2, 130px);
+    /*? Distribución de botones en dos columnas */
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
@@ -194,29 +233,32 @@ header {
 
 .slider .list .item .button .sliderbutton {
     color: #fff;
-    background-color: #ff3131; 
+    background-color: #ff3131;
 }
 
 .slider .list .item .button .sliderbutton:hover {
     color: #333;
-    background-color: #fff; 
+    background-color: #fff;
 }
 
 /*  Thumbnail Section  */
 .thumbnail {
     position: absolute;
     bottom: 50px;
-    left: 50%; /* Centra las miniaturas en la parte inferior del slider */
+    left: 50%;
+    /* Centra las miniaturas en la parte inferior del slider */
     width: max-content;
     z-index: 100;
     display: flex;
-    gap: 20px; /* Espaciado entre miniaturas */
+    gap: 20px;
+    /* Espaciado entre miniaturas */
 }
 
 .thumbnail .item {
     width: 150px;
     height: 220px;
-    flex-shrink: 0; /* Evita que las miniaturas se reduzcan de tamaño */
+    flex-shrink: 0;
+    /* Evita que las miniaturas se reduzcan de tamaño */
     position: relative;
 }
 
@@ -224,44 +266,51 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px; /* Bordes redondeados para las miniaturas */
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Sombra para las miniaturas */
+    border-radius: 20px;
+    /* Bordes redondeados para las miniaturas */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    /* Sombra para las miniaturas */
 }
 
 /*  Next/Prev Arrows Section  */
 .nextPrevArrows {
     position: absolute;
-    top: 80%; /* Posición de las flechas de navegación */
+    top: 80%;
+    /* Posición de las flechas de navegación */
     right: 52%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px; /* Espaciado entre las flechas */
+    gap: 10px;
+    /* Espaciado entre las flechas */
     align-items: center;
 }
 
 .nextPrevArrows button {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Botones redondos */
+    border-radius: 50%;
+    /* Botones redondos */
     background-color: #ff3131cd;
     border: none;
     color: #fff;
     font-family: monospace;
     font-weight: bold;
-    transition: .5s; /* Transición suave al cambiar el estado */
+    transition: .5s;
+    /* Transición suave al cambiar el estado */
     cursor: pointer;
 }
 
 .nextPrevArrows button:hover {
     background-color: #fff;
-    color: #000; 
+    color: #000;
 }
 
 /*  Animation Section  */
 .slider .list .item:nth-child(1) {
-    z-index: 1; /* Primer elemento del slider siempre en primer plano */
+    z-index: 1;
+    /* Primer elemento del slider siempre en primer plano */
 }
 
 /* Animación del texto en el primer elemento */
@@ -271,32 +320,39 @@ header {
 .slider .list .item:nth-child(1) .content .buttons {
     transform: translateY(50px);
     filter: blur(20px);
-    opacity: 0; /* Comienza con baja opacidad y desenfoque */
-    animation: showContent .5s 1s linear 1 forwards; /* Animación para mostrar contenido */
+    opacity: 0;
+    /* Comienza con baja opacidad y desenfoque */
+    animation: showContent .5s 1s linear 1 forwards;
+    /* Animación para mostrar contenido */
 }
 
 @keyframes showContent {
     to {
         transform: translateY(0px);
         filter: blur(0px);
-        opacity: 1; /* Termina con opacidad completa y sin desenfoque */
+        opacity: 1;
+        /* Termina con opacidad completa y sin desenfoque */
     }
 }
 
 .slider .list .item:nth-child(1) .content .title {
-    animation-delay: 0.4s !important; /* Retrasa la animación del título */
+    animation-delay: 0.4s !important;
+    /* Retrasa la animación del título */
 }
 
 .slider .list .item:nth-child(1) .content .title2 {
-    animation-delay: 0.6s !important; /* Retrasa la animación del segundo título */
+    animation-delay: 0.6s !important;
+    /* Retrasa la animación del segundo título */
 }
 
 .slider .list .item:nth-child(1) .content .description {
-    animation-delay: 0.8s !important; /* Retrasa la animación de la descripción */
+    animation-delay: 0.8s !important;
+    /* Retrasa la animación de la descripción */
 }
 
 .slider .list .item:nth-child(1) .content .buttons {
-    animation-delay: 1s !important; /* Retrasa la animación de los botones */
+    animation-delay: 1s !important;
+    /* Retrasa la animación de los botones */
 }
 
 /* Animación para el clic del botón siguiente */
@@ -307,7 +363,8 @@ header {
     bottom: 50px;
     left: 50%;
     border-radius: 30px;
-    animation: showImage .5s linear 1 forwards; /* Animación para mostrar la imagen */
+    animation: showImage .5s linear 1 forwards;
+    /* Animación para mostrar la imagen */
 }
 
 @keyframes showImage {
@@ -316,39 +373,46 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 0; /* Se ajusta la imagen a tamaño completo */
+        border-radius: 0;
+        /* Se ajusta la imagen a tamaño completo */
     }
 }
 
 .slider.next .thumbnail .item:nth-last-child(1) {
     overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura */
+    animation: showThumbnail .5s linear 1 forwards;
+    /* Animación para mostrar la miniatura */
 }
 
 @keyframes showThumbnail {
     from {
         width: 0;
-        opacity: 0; /* Comienza con opacidad 0 y sin ancho */
+        opacity: 0;
+        /* Comienza con opacidad 0 y sin ancho */
     }
 }
 
 .slider.next .thumbnail {
-    animation: effectNext .5s linear 1 forwards; /* Animación al pasar a la siguiente miniatura */
+    animation: effectNext .5s linear 1 forwards;
+    /* Animación al pasar a la siguiente miniatura */
 }
 
 @keyframes effectNext {
     from {
-        transform: translateX(150px); /* Desplaza la miniatura hacia la derecha */
+        transform: translateX(150px);
+        /* Desplaza la miniatura hacia la derecha */
     }
 }
 
 /* Animación para el clic del botón anterior */
 .slider.prev .list .item:nth-child(2) {
-    z-index: 2; /* El segundo elemento se muestra en segundo plano */
+    z-index: 2;
+    /* El segundo elemento se muestra en segundo plano */
 }
 
 .slider.prev .list .item:nth-child(2) img {
-    animation: outFrame 0.5s linear 1 forwards; /* Animación al mover la imagen fuera de la vista */
+    animation: outFrame 0.5s linear 1 forwards;
+    /* Animación al mover la imagen fuera de la vista */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -359,7 +423,8 @@ header {
         width: 150px;
         height: 220px;
         bottom: 50px;
-        left: 50%; /* La imagen vuelve a su tamaño reducido y posición */
+        left: 50%;
+        /* La imagen vuelve a su tamaño reducido y posición */
         border-radius: 20px;
     }
 }
@@ -367,29 +432,53 @@ header {
 .slider.prev .thumbnail .item:nth-child(1) {
     overflow: hidden;
     opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura al ir hacia atrás */
+    animation: showThumbnail .5s linear 1 forwards;
+    /* Animación para mostrar la miniatura al ir hacia atrás */
 }
 
 .slider.next .nextPrevArrows button,
 .slider.prev .nextPrevArrows button {
-    pointer-events: none; /* Desactiva los botones mientras se realiza la animación */
+    pointer-events: none;
+    /* Desactiva los botones mientras se realiza la animación */
 }
 
 .slider.prev .list .item:nth-child(2) .content .title,
 .slider.prev .list .item:nth-child(2) .content .title2,
 .slider.prev .list .item:nth-child(2) .content .description,
 .slider.prev .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1.5s linear 1 forwards !important; /* Animación para ocultar el contenido */
+    animation: contentOut 1.5s linear 1 forwards !important;
+    /* Animación para ocultar el contenido */
 }
 
 @keyframes contentOut {
     to {
         transform: translateY(-150px);
         filter: blur(20px);
-        opacity: 0; /* El contenido se mueve hacia arriba y desaparece */
+        opacity: 0;
+        /* El contenido se mueve hacia arriba y desaparece */
     }
 }
 
+/*------------------- VIDEO HOME ----------------------*/
+/* El video ocupará el 100% del ancho de la pantalla y mantendrá la relación de aspecto */
+.full-width-video {
+    position: relative;
+    width: 100vw;
+    /* 100% del ancho de la ventana */
+    height: 56.25vw;
+    /* Mantener relación de aspecto 16:9 */
+    overflow: hidden;
+}
+
+.full-width-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Para cubrir el área de manera completa */
+}
 
 /* -------------------------------------- MET THE CAST --------------------------------- */
 
@@ -557,7 +646,8 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -567,28 +657,34 @@ header {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
-    font-family: 'Raleway', sans-serif; /* Puedes ajustar la fuente */
+    font-family: 'Raleway', sans-serif;
+    /* Puedes ajustar la fuente */
 }
 
 .streaming-banner a {
-    text-decoration: none; /* Sin subrayado */
-    color: inherit; /* Mantener el color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    color: inherit;
+    /* Mantener el color del texto */
 }
 
 
 /* back stage*/
 /* Contenedor de la imagen dentro de la tarjeta */
 .card {
-    overflow: hidden; /* Para evitar que la imagen se salga al hacer zoom */
+    overflow: hidden;
+    /* Para evitar que la imagen se salga al hacer zoom */
 }
 
 /* Estilo de la imagen con efecto hover */
 .card-img-top {
-    transition: transform 0.3s ease; /* Transición suave para el zoom */
+    transition: transform 0.3s ease;
+    /* Transición suave para el zoom */
 }
 
 .card-img-top:hover {
-    transform: scale(1.3); /* Ampliación de la imagen al hacer hover */
+    transform: scale(1.3);
+    /* Ampliación de la imagen al hacer hover */
 }
 
 
@@ -1127,17 +1223,21 @@ footer {
 .gallery-item {
     position: relative;
 }
+
 .gallery-item img {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
 .gallery-item img:hover {
     transform: scale(1.05);
 }
+
 .modal-dialog {
     max-width: 90%;
 }
+
 .modal-content {
     border-radius: 10px;
 }
@@ -1156,10 +1256,12 @@ footer {
     cursor: pointer;
     text-align: center;
 }
+
 .moment-card img {
     width: 100%;
     height: auto;
 }
+
 .moment-title {
     margin-top: 10px;
 }
@@ -1175,9 +1277,12 @@ footer {
 
 /* Cambiar el color de fondo del encabezado del acordeón activo */
 .accordion-button:not(.collapsed) {
-    background-color: #333333cd; /* Color de fondo deseado para el botón activo */
-    color: #fff; /* Color del texto para el botón activo */
-    border-color: #dee2e6; /* Color del borde para el botón activo (opcional) */
+    background-color: #333333cd;
+    /* Color de fondo deseado para el botón activo */
+    color: #fff;
+    /* Color del texto para el botón activo */
+    border-color: #dee2e6;
+    /* Color del borde para el botón activo (opcional) */
 }
 
 
@@ -1208,14 +1313,12 @@ footer {
 /* Ajustes específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .modal-dialog.modal-lg {
-        max-width: 90%; /* Ajustar el ancho del modal en pantallas móviles */
+        max-width: 90%;
+        /* Ajustar el ancho del modal en pantallas móviles */
     }
-    
+
     .modal-body img {
-        width: 100%; /* Asegura que la imagen ocupe todo el ancho del modal en mobile */
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho del modal en mobile */
     }
 }
-
-
-
-
