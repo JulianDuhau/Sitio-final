@@ -166,135 +166,378 @@
 
 
     <!-- Meet the cast -->
-<div class="wrapper">
-    <div class="header-placeholder"></div>
-    <div class="title">
-        <h4>Meet the Cast</h4>
-    </div>
-    <div class="card_Container">
 
-        <div class="card">
-            <div class="imbBx">
-                <img src="./assets/img/josh-ted.jpg" alt="Josh Image">
-            </div>
-            <div class="content">
-                <div class="contentBx">
-                    <h3>Josh Radnor <br><span>Ted Mosby</span></h3>
-                </div>
-                <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://www.instagram.com/joshradnor/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="https://www.facebook.com/JoshRadnor" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                        <a href="https://x.com/JoshRadnor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
-            </div>
+    <div class="container my-5">
+        <div class="header-placeholder"></div>
+        <div class="title">
+            <h4>Meet the Cast</h4>
         </div>
-
-        <div class="card">
-            <div class="imbBx">
-                <img src="./assets/img/cobie-robin.jpg" alt="Cobie Image">
-            </div>
-            <div class="content">
-                <div class="contentBx">
-                    <h3>Cobie Smulders <br><span>Robin Scherbatsky</span></h3>
+        <div class="row justify-content-center">
+            <!-- Actor 1 -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+                <div class="cast-card" data-bs-toggle="modal" data-bs-target="#actorModal1">
+                    <img src="./assets/img/Josh-cast.svg" alt="Actor 1" class="img-fluid cast-image">
+                    <h3 class="cast-name">Josh Radnor</h3>
+                    <p class="cast-character">Ted Mosby</p>
                 </div>
-                <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://www.instagram.com/cobiesmulders/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="https://www.facebook.com/CobieSmuldersofficial" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                        <a href="https://x.com/CobieSmulders" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="imbBx">
-                <img src="./assets/img/neil-barney.jpg" alt="Barney Image">
-            </div>
-            <div class="content">
-                <div class="contentBx">
-                    <h3>Neil Patrick Harris <br><span>Barney Stinson</span></h3>
+            <!-- Actor 2 -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+                <div class="cast-card" data-bs-toggle="modal" data-bs-target="#actorModal2">
+                    <img src="./assets/img/cobie-cast.svg" alt="Actor 2" class="img-fluid cast-image">
+                    <h3 class="cast-name">Cobie Smulders</h3>
+                    <p class="cast-character">Robin Scherbatsky</p>
                 </div>
-                <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://www.instagram.com/nph/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="https://www.facebook.com/Nph" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                        <a href="https://x.com/ActuallyNPH" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="imbBx">
-                <img src="./assets/img/alyson-lily.jpg" alt="Alyson Image">
-            </div>
-            <div class="content">
-                <div class="contentBx">
-                    <h3>Alyson Hannigan <br><span>Lily Aldrin</span></h3>
+            <!-- Actor 3 -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+                <div class="cast-card" data-bs-toggle="modal" data-bs-target="#actorModal3">
+                    <img src="./assets/img/neil-cast.svg" alt="Actor 3" class="img-fluid cast-image">
+                    <h3 class="cast-name">Neil Patrick Harris</h3>
+                    <p class="cast-character">Barney Stinson</p>
                 </div>
-                <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://www.instagram.com/alysonhannigan/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="https://www.facebook.com/AlysonHannigan" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                        <a href="https://twitter.com/AlysonHannigan" target="_blank"><i
-                                class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="imbBx">
-                <img src="./assets/img/jason-marshall.jpg" alt="Marshall Image">
-            </div>
-            <div class="content">
-                <div class="contentBx">
-                    <h3>Jason Segel <br><span>Marshall Eriksen</span></h3>
+            <!-- Actor 4 -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+                <div class="cast-card" data-bs-toggle="modal" data-bs-target="#actorModal4">
+                    <img src="./assets/img/alyson-cast.svg" alt="Actor 4" class="img-fluid cast-image">
+                    <h3 class="cast-name">Alyson Hannigan</h3>
+                    <p class="cast-character">Lily Aldrin</p>
                 </div>
-                <ul class="sci">
-                    <li style="--i: 1">
-                        <a href="https://www.instagram.com/jasonsegel/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li style="--i: 2">
-                        <a href="https://www.facebook.com/jasonsegel" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li style="--i: 3">
-                        <a href="https://twitter.com/jasonsegel" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
+            </div>
+            <!-- Actor 5 -->
+            <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
+                <div class="cast-card" data-bs-toggle="modal" data-bs-target="#actorModal5">
+                    <img src="./assets/img/Jason-cast.svg" alt="Actor 5" class="img-fluid cast-image">
+                    <h3 class="cast-name">Jason Segel</h3>
+                    <p class="cast-character">Marshall Eriksen</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- Modal Actor 1 -->
+    <div class="modal fade" id="actorModal1" tabindex="-1" aria-labelledby="actorModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="actorModalLabel1">Josh Radnor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assets/img/Josh-cast.svg" alt="Actor 1" class="modal-image mb-3">
+                    <h2>Josh Radnor - Biography</h2>
+                    <p><strong>Full Name:</strong> Joshua Thomas Radnor</p>
+                    <p><strong>Born:</strong> July 29, 1974</p>
+                    <p><strong>Birthplace:</strong> Columbus, Ohio, USA</p>
+                    <p><strong>Profession:</strong> Actor, Director, Producer, Writer, Musician</p>
+
+                    <p>Josh Radnor is an American actor best known for his role as Ted Mosby on the hit TV show <em>How
+                            I Met Your Mother</em> (2005–2014). Radnor's portrayal of the romantic and idealistic
+                        architect searching for love resonated with audiences, helping make the character a fan favorite
+                        over the show's nine seasons.</p>
+
+                    <h3>Early Life & Education</h3>
+                    <p>Radnor was raised in Bexley, Ohio, a suburb of Columbus. He attended Bexley High School and later
+                        earned a Bachelor’s degree in Drama from Kenyon College, where he received the Paul Newman
+                        Award. He furthered his education by obtaining a Master of Fine Arts (MFA) in acting from New
+                        York University's Tisch School of the Arts.</p>
+
+                    <h3>Career Highlights</h3>
+                    <ul>
+                        <li><strong>Television & Acting:</strong> Josh Radnor's breakthrough role came with <em>How I
+                                Met Your Mother</em>, a show that brought him significant fame. Prior to this, he had
+                            guest appearances on shows like <em>ER</em>, <em>Law & Order</em>, and <em>Six Feet
+                                Under</em>. After <em>How I Met Your Mother</em>, he appeared in series such as
+                            <em>Mercy Street</em> and <em>Hunters</em>.
+                        </li>
+                        <li><strong>Film:</strong> Radnor also stepped behind the camera, writing, directing, and
+                            starring in <em>Happythankyoumoreplease</em> (2010), a film that won the Audience Award at
+                            the Sundance Film Festival. His second film, <em>Liberal Arts</em> (2012), was also well
+                            received and showcased his interest in exploring meaningful, character-driven stories.</li>
+                        <li><strong>Theatre:</strong> Beyond film and TV, Radnor has performed on Broadway, including a
+                            role in <em>The Graduate</em> alongside Kathleen Turner and <em>Disgraced</em>, a Pulitzer
+                            Prize-winning play.</li>
+                    </ul>
+
+                    <h3>Music Career</h3>
+                    <p>In addition to his work as an actor and filmmaker, Radnor is also a musician. He partnered with
+                        musician Ben Lee to form the band Radnor & Lee, releasing albums that reflect his deep
+                        philosophical and spiritual interests.</p>
+
+                    <h3>Personal Life</h3>
+                    <p>Radnor is known for his introspective nature and his interest in spirituality and
+                        self-development. He has spoken about his love for reading and his journey through meditation
+                        and mindfulness. Though he tends to keep his personal life private, Radnor is recognized for his
+                        thoughtful interviews and reflections on fame and creativity.</p>
+
+                    <h3>Legacy</h3>
+                    <p>While Ted Mosby is his most iconic role, Radnor has proven himself to be a multi-talented artist
+                        with a broad interest in storytelling, whether through acting, directing, writing, or music. His
+                        career continues to evolve as he takes on new creative projects across various platforms.</p>
+
+                    <div class="social-icons">
+                        <a href="https://x.com/JoshRadnor" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/joshradnor/" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/JoshRadnor" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Actor 2 -->
+    <div class="modal fade" id="actorModal2" tabindex="-1" aria-labelledby="actorModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="actorModalLabel2">Cobie Smulders</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assets/img/cobie-cast.svg" alt="Actor 2" class="modal-image mb-3">
+                    <h2>Cobie Smulders - Biography</h2>
+                    <p><strong>Full Name:</strong> Jacoba Francisca Maria Smulders</p>
+                    <p><strong>Born:</strong> April 3, 1982</p>
+                    <p><strong>Birthplace:</strong> Vancouver, British Columbia, Canada</p>
+                    <p><strong>Profession:</strong> Actress, Model</p>
+
+                    <p>Cobie Smulders is a Canadian actress best known for her role as Robin Scherbatsky on the popular
+                        television series <em>How I Met Your Mother</em> (2005–2014). Her portrayal of the ambitious and
+                        independent journalist won her critical acclaim and made her a beloved character among fans of
+                        the show.</p>
+
+                    <h3>Early Life & Education</h3>
+                    <p>Born and raised in Vancouver, Smulders grew up with a passion for performing arts. She attended
+                        the University of Victoria, where she studied acting. Before her acting career took off, she
+                        worked as a model and was featured in various advertising campaigns.</p>
+
+                    <h3>Career Highlights</h3>
+                    <ul>
+                        <li><strong>Television:</strong> Smulders gained widespread recognition for her role in <em>How
+                                I Met Your Mother</em>. In addition to her work on the series, she has appeared in
+                            various television shows, including <em>Veronica Mars</em>, <em>Once Upon a Time</em>, and
+                            <em>Friends from College</em>.
+                        </li>
+                        <li><strong>Film:</strong> Cobie Smulders has also made a name for herself in the film industry.
+                            She appeared in major films such as <em>The Avengers</em> (2012) and its sequels, where she
+                            played Maria Hill, a high-ranking S.H.I.E.L.D. agent. Other notable films include
+                            <em>Results</em> (2015) and <em>Jack Reacher: Never Go Back</em> (2016).
+                        </li>
+                        <li><strong>Theatre:</strong> Smulders has performed in various theatrical productions,
+                            showcasing her versatility as an actress.</li>
+                    </ul>
+
+                    <h3>Personal Life</h3>
+                    <p>Cobie Smulders is known for her down-to-earth personality and commitment to various charitable
+                        causes. She is married to actor Taran Killam, with whom she has two children. Smulders is also
+                        an advocate for breast cancer awareness, having been diagnosed with the disease at a young age.
+                    </p>
+
+                    <h3>Legacy</h3>
+                    <p>Smulders has left a significant mark in both television and film, captivating audiences with her
+                        talent and charm. Her role as Robin Scherbatsky remains one of her most iconic performances, and
+                        she continues to evolve as an actress in various genres.</p>
+
+                    <div class="social-icons">
+                        <a href="https://x.com/CobieSmulders" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/cobiesmulders/" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/CobieSmuldersofficial" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Actor 3 -->
+    <div class="modal fade" id="actorModal3" tabindex="-1" aria-labelledby="actorModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="actorModalLabel3">Neil Patrick Harris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assets/img/neil-cast.svg" alt="Actor 3" class="modal-image mb-3">
+                    <h2>Neil Patrick Harris - Biography</h2>
+                    <p><strong>Full Name:</strong> Neil Patrick Harris</p>
+                    <p><strong>Born:</strong> June 15, 1973</p>
+                    <p><strong>Birthplace:</strong> Albuquerque, New Mexico, USA</p>
+                    <p><strong>Profession:</strong> Actor, Singer, Magician, Producer</p>
+
+                    <p>Neil Patrick Harris is an American actor, best known for his role as Barney Stinson on the iconic
+                        television series <em>How I Met Your Mother</em> (2005–2014). His portrayal of the charming,
+                        womanizing character earned him critical acclaim and a dedicated fan base, making Barney one of
+                        the most memorable characters in television history.</p>
+
+                    <h3>Early Life & Education</h3>
+                    <p>Harris was born in Albuquerque, New Mexico, and raised in Ruidoso, New Mexico. He discovered his
+                        passion for acting at a young age and began performing in local theater productions. He attended
+                        the University of Albuquerque and later transferred to California to pursue his acting career.
+                    </p>
+
+                    <h3>Career Highlights</h3>
+                    <ul>
+                        <li><strong>Television:</strong> Before <em>How I Met Your Mother</em>, Harris gained fame as a
+                            teenage doctor on the medical drama <em>Doogie Howser, M.D.</em> (1989–1993). His role as
+                            Barney Stinson showcased his comedic talents and versatility as an actor, earning him
+                            multiple Emmy nominations.</li>
+                        <li><strong>Film:</strong> In addition to television, Harris has appeared in several films,
+                            including <em>Harold & Kumar Go to White Castle</em> (2004), <em>Gone Girl</em> (2014), and
+                            <em>The Smurfs</em> (2011). He is also known for his voice work in animated films and
+                            series.
+                        </li>
+                        <li><strong>Theatre:</strong> Harris is a talented stage performer, having starred in Broadway
+                            productions such as <em>Rent</em>, <em>Cabaret</em>, and <em>Hedwig and the Angry Inch</em>,
+                            for which he received a Tony Award for Best Actor.</li>
+                    </ul>
+
+                    <h3>Personal Life</h3>
+                    <p>Neil Patrick Harris is openly gay and has been a prominent advocate for LGBTQ+ rights. He is
+                        married to David Burtka, with whom he has two children. Harris is known for his love of magic
+                        and often incorporates magic tricks into his performances.</p>
+
+                    <h3>Legacy</h3>
+                    <p>Harris's career spans decades and includes a wide range of performances across multiple mediums.
+                        His role as Barney Stinson has left a lasting impact on pop culture, and he continues to be a
+                        beloved figure in the entertainment industry, known for his charisma and talent.</p>
+
+                    <div class="social-icons">
+                        <a href="https://x.com/ActuallyNPH" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/nph/" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Nph" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Actor 4 -->
+    <div class="modal fade" id="actorModal4" tabindex="-1" aria-labelledby="actorModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="actorModalLabel4">Alyson Hannigan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assets/img/alyson-cast.svg" alt="Actor 4" class="modal-image mb-3">
+                    <h2>Alyson Hannigan - Biography</h2>
+                    <p><strong>Full Name:</strong> Alyson Lee Hannigan</p>
+                    <p><strong>Born:</strong> March 24, 1974</p>
+                    <p><strong>Birthplace:</strong> Washington, D.C., USA</p>
+                    <p><strong>Profession:</strong> Actress, Producer</p>
+
+                    <p>Alyson Hannigan is an American actress best known for her role as Lily Aldrin on the acclaimed
+                        television series <em>How I Met Your Mother</em> (2005–2014). Her portrayal of the quirky and
+                        artistic character earned her critical acclaim and made her a fan favorite throughout the show's
+                        nine seasons.</p>
+
+                    <h3>Early Life & Education</h3>
+                    <p>Hannigan was born in Washington, D.C., and raised in Atlanta, Georgia. She developed an interest
+                        in acting at a young age, participating in school plays and community theater. She attended the
+                        University of California, Los Angeles (UCLA), where she studied psychology while continuing to
+                        pursue her acting career.</p>
+
+                    <h3>Career Highlights</h3>
+                    <ul>
+                        <li><strong>Television:</strong> Before <em>How I Met Your Mother</em>, Hannigan gained fame as
+                            Willow Rosenberg on the cult-favorite series <em>Buffy the Vampire Slayer</em> (1997–2003).
+                            Her performance as the shy and intelligent witch was beloved by fans and showcased her
+                            comedic and dramatic range.</li>
+                        <li><strong>Film:</strong> Hannigan is also known for her roles in popular films such as
+                            <em>American Pie</em> (1999) and its sequels, where she played Michelle Flaherty, a
+                            character that became iconic for her humorous one-liners.
+                        </li>
+                        <li><strong>Theatre:</strong> In addition to her screen work, Hannigan has appeared in various
+                            stage productions, demonstrating her versatility as a performer.</li>
+                    </ul>
+
+                    <h3>Personal Life</h3>
+                    <p>Alyson Hannigan is married to actor Alexis Denisof, whom she met on the set of <em>Buffy the
+                            Vampire Slayer</em>. The couple has two daughters. Hannigan is known for her down-to-earth
+                        personality and has spoken openly about her experiences in Hollywood, including the challenges
+                        of balancing work and family life.</p>
+
+                    <h3>Legacy</h3>
+                    <p>Hannigan's performances have made her a beloved figure in both television and film, with a legacy
+                        that includes memorable roles that resonate with audiences. Her work on <em>How I Met Your
+                            Mother</em> and <em>Buffy the Vampire Slayer</em> continues to earn her recognition and
+                        admiration from fans around the world.</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/alysonhannigan/" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Actor 5 -->
+    <div class="modal fade" id="actorModal5" tabindex="-1" aria-labelledby="actorModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="actorModalLabel5">Jason Segel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assets/img/jason-cast.svg" alt="Actor 5" class="modal-image mb-3">
+                    <h2>Jason Segel - Biography</h2>
+                    <p><strong>Full Name:</strong> Jason Jordan Segel</p>
+                    <p><strong>Born:</strong> January 18, 1980</p>
+                    <p><strong>Birthplace:</strong> Los Angeles, California, USA</p>
+                    <p><strong>Profession:</strong> Actor, Screenwriter, Producer</p>
+
+                    <p>Jason Segel is an American actor, best known for his role as Marshall Eriksen on the beloved
+                        television series <em>How I Met Your Mother</em> (2005–2014). His portrayal of the lovable and
+                        kind-hearted lawyer earned him critical acclaim and made him a favorite among fans.</p>
+
+                    <h3>Early Life & Education</h3>
+                    <p>Segel was born in Los Angeles, California, and raised in a creative environment, influenced by
+                        his family’s artistic interests. He attended the University of California, Santa Barbara, where
+                        he studied theatre and graduated with a Bachelor of Arts degree.</p>
+
+                    <h3>Career Highlights</h3>
+                    <ul>
+                        <li><strong>Television:</strong> Before <em>How I Met Your Mother</em>, Segel gained recognition
+                            for his role as Marshall's college roommate, Nick, on the television series <em>Freaks and
+                                Geeks</em> (1999–2000). His performance showcased his comedic talent and emotional
+                            depth.</li>
+                        <li><strong>Film:</strong> Segel is known for his work in films such as <em>Forgetting Sarah
+                                Marshall</em> (2008), which he also wrote and produced. His role as the heartbroken
+                            musician showcased his ability to blend comedy and drama. Other notable films include
+                            <em>The Muppets</em> (2011) and <em>Bad Teacher</em> (2011).</li>
+                        <li><strong>Theatre:</strong> In addition to his screen work, Segel has performed in stage
+                            productions, further demonstrating his versatility as a performer.</li>
+                    </ul>
+
+                    <h3>Personal Life</h3>
+                    <p>Jason Segel is known for his warm personality and humor, both on and off-screen. He has been
+                        involved in various philanthropic efforts and enjoys a close relationship with his family. Segel
+                        has openly discussed his experiences with anxiety and the importance of mental health.</p>
+
+                    <h3>Legacy</h3>
+                    <p>Segel's contributions to television and film have made him a beloved figure in the entertainment
+                        industry. His role as Marshall Eriksen continues to resonate with audiences, and he is
+                        celebrated for his ability to connect with viewers through both humor and heartfelt moments.</p>
+
+                    <div class="social-icons">
+                        <a href="https://twitter.com/jasonsegel" target="_blank" class="btn btn-outline-dark mx-2"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/jasonsegel/" target="_blank"
+                            class="btn btn-outline-dark mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="streaming-banner">
