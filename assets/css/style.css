@@ -1220,8 +1220,10 @@ footer {
 
 
 /* met the cast */
+/* Ajustes para pantallas más pequeñas (móvil) */
 @media (max-width: 768px) {
-    .cast-image {
-        border-radius: 15px;
+    .actor-img {
+        border-radius: 50%; /* Mantiene el borde redondeado en móvil */
+        /* Puedes ajustar el tamaño si es necesario */
     }
 }
