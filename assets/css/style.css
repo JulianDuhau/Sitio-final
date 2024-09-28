@@ -47,11 +47,15 @@ h6 {
     border-radius: 15px;
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    word-wrap: break-word;
 }
 
 .placeholder {
-    height: 80px;
+    height: 50px;
+}
+
+.back-dark {
+    background-color: #333333;
+    color: #fff;
 }
 
 body p {
@@ -60,448 +64,195 @@ body p {
 }
 
 /* ----------------------- Header-NavBar -------------------------- */
-
-/* Estilos para el header de la página */
-header {
-    background: #192233;
-    /* Fondo de color oscuro */
+:root {
+    --main-color: #ff2c1f;
+    --text-color: #020307;
+    --bg-color: #fff;
 }
 
-/* Estilos para el logo en el header */
-.logo {
-    max-width: 150px;
-    /* Limita el tamaño máximo del logo a 150px */
-}
 
-/* Estilos para la barra de navegación */
-.navbar {
-    background-color: #192233;
-    /* Fondo oscuro que coincide con el header */
-}
 
-/* Estilos para los enlaces en la barra de navegación */
-.navbar-nav .nav-link {
-    color: white;
-    /* Texto en color blanco */
-    text-transform: uppercase;
-    /* Convierte el texto a mayúsculas */
-    font-family: "Dax Regular";
-    /* Usa la fuente 'Dax Regular' */
-    margin: 0 10px 0 10px;
-    /* Margen horizontal de 10px entre los enlaces */
-}
-
-/* Estilos para el offcanvas (menú desplegable en dispositivos móviles) */
-.offcanvas {
-    background-color: #192233;
-    /* Fondo oscuro en el offcanvas */
-    text-align: center;
-    /* Centra el texto */
-}
-
-/* Estilos para los enlaces dentro del menú offcanvas */
-.offcanvas .nav-link {
-    color: white;
-    /* Texto en blanco */
-}
-
-/* Corregir la clase mal escrita (cambiar .nav-limk a .nav-link) */
-.nav-link {
-    font-weight: 600;
-    /* Hace el texto más grueso (negrita) */
-    color: #333;
-    /* Color del texto en gris oscuro */
-}
-
-/* Elimina el contorno que aparece al hacer clic en el botón del menú en móviles */
-.navbar-toggler:focus {
-    box-shadow: none;
-    /* Sin sombra al hacer focus */
-}
-
-/* Estilos para el ícono de menú (líneas en cuadrícula) */
-.lni-grid-alt {
-    font-size: 1.5rem;
-    /* Tamaño del ícono de 1.5 rem */
-    color: white;
-    /* Color del ícono en blanco */
-}
-
-/* Estilos para el ícono de cierre (una X dentro de un círculo) */
-.lni-cross-circle {
-    font-size: 2rem;
-    /* Tamaño del ícono de 2 rem */
-    color: white;
-    /* Color del ícono en blanco */
-}
-
-/* Espacio placeholder debajo del header */
-.header-placeholder {
-    height: 30px;
-    /* Altura del placeholder de 30px */
-}
-
-/* ----------------- Estilo de los enlaces de la navbar ----------------- */
-
-/* Estilos generales para los enlaces de la barra de navegación */
-.nav-link {
-    position: relative;
-    /* Para permitir la pseudo-clase ::after */
-    color: #ffffff;
-    /* Color de texto blanco */
-    text-decoration: none;
-    /* Sin subrayado en los enlaces */
-    padding-bottom: 5px;
-    /* Espacio inferior de 5px para acomodar la línea inferior */
-}
-
-/* Estilos para la línea que aparece debajo del enlace al hacer hover */
-.nav-link::after {
-    content: '';
-    /* Crea un contenido vacío (la línea) */
-    position: absolute;
-    /* Posicionamiento absoluto para que esté debajo del texto */
-    width: 0;
-    /* Ancho inicial de la línea es 0 */
-    height: 1px;
-    /* Grosor de la línea */
-    background-color: #ff3131;
-    /* Color de la línea en rojo brillante */
-    left: 0;
-    /* La línea comienza desde el lado izquierdo del enlace */
-    bottom: 0;
-    /* La línea se coloca en la parte inferior del enlace */
-    transition: width 0.3s ease-in-out;
-    /* Transición suave para el ancho de la línea */
-}
-
-/* Al hacer hover sobre el enlace, la línea se expande */
-.nav-link:hover::after {
+.custom-header {
+    position: fixed;
     width: 100%;
-    /* La línea se expande para cubrir todo el ancho del enlace */
-}
-
-/* --------------------- Carousel - slider section -------------------------------- */
-.slider {
-    height: 100vh;
-    margin-top: 50px;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    /* El slider se posiciona de manera relativa */
-}
-
-.slider .list .item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0 0 0 0;
-    /* La imagen cubre todo el contenedor */
-}
-
-.slider .list .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* La imagen se ajusta al contenedor sin perder proporciones */
-}
-
-.slider .list .item .content {
-    position: absolute;
-    top: 20%;
-    /* La posición del contenido dentro del slider */
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Centra el contenido horizontalmente */
-    padding-right: 30%;
-    box-sizing: border-box;
-    color: #fff;
-    text-shadow: 0 5px 10px #0004;
-    /* Sombra del texto */
-}
-
-.slider .list .item .content .title,
-.slider .list .item .content .title2 {
-    font-size: 5em;
-    /* Tamaño grande para títulos */
-    font-weight: bold;
-    line-height: 1.3em;
-    font-family: "Dax Regular";
-}
-
-.slider .list .item .title2 {
-    color: #ff3131;
-}
-
-.slider .list .item .content .description {
-    font-family: "MontserratAlternates-Regular";
-}
-
-.slider .list .item .button {
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    /*? Distribución de botones en dos columnas */
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-
-.slider .list .item .button .sliderbutton {
-    color: #fff;
-    background-color: #ff3131;
-}
-
-.slider .list .item .button .sliderbutton:hover {
-    color: #333;
-    background-color: #fff;
-}
-
-/*  Thumbnail Section  */
-.thumbnail {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    /* Centra las miniaturas en la parte inferior del slider */
-    width: max-content;
-    z-index: 100;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    gap: 20px;
-    /* Espaciado entre miniaturas */
-}
-
-.thumbnail .item {
-    width: 150px;
-    height: 220px;
-    flex-shrink: 0;
-    /* Evita que las miniaturas se reduzcan de tamaño */
-    position: relative;
-}
-
-.thumbnail .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    /* Bordes redondeados para las miniaturas */
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
-    /* Sombra para las miniaturas */
-}
-
-/*  Next/Prev Arrows Section  */
-.nextPrevArrows {
-    position: absolute;
-    top: 80%;
-    /* Posición de las flechas de navegación */
-    right: 52%;
-    z-index: 100;
-    width: 300px;
-    max-width: 30%;
-    display: flex;
-    gap: 10px;
-    /* Espaciado entre las flechas */
     align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    transition: 0.5s;
 }
 
-.nextPrevArrows button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    /* Botones redondos */
-    background-color: #ff3131cd;
-    border: none;
-    color: #fff;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .5s;
-    /* Transición suave al cambiar el estado */
-    cursor: pointer;
+.custom-header.shadow {
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgba(14, 55, 54, 0.15);
 }
 
-.nextPrevArrows button:hover {
-    background-color: #fff;
-    color: #000;
+.custom-header.shadow .custom-navbar a {
+    color: var(--text-color);
 }
 
-/*  Animation Section  */
-.slider .list .item:nth-child(1) {
-    z-index: 1;
-    /* Primer elemento del slider siempre en primer plano */
+.custom-header img {
+    max-width: 150px;
 }
 
-/* Animación del texto en el primer elemento */
-.slider .list .item:nth-child(1) .content .title,
-.slider .list .item:nth-child(1) .content .title2,
-.slider .list .item:nth-child(1) .content .description,
-.slider .list .item:nth-child(1) .content .buttons {
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    /* Comienza con baja opacidad y desenfoque */
-    animation: showContent .5s 1s linear 1 forwards;
-    /* Animación para mostrar contenido */
+.bx {
+    color: var(--main-color);
 }
 
-@keyframes showContent {
-    to {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-        /* Termina con opacidad completa y sin desenfoque */
-    }
+.custom-navbar {
+    display: flex;
+    column-gap: 5rem;
 }
 
-.slider .list .item:nth-child(1) .content .title {
-    animation-delay: 0.4s !important;
-    /* Retrasa la animación del título */
+.custom-navbar li {
+    position: relative;
 }
 
-.slider .list .item:nth-child(1) .content .title2 {
-    animation-delay: 0.6s !important;
-    /* Retrasa la animación del segundo título */
+.custom-navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    text-decoration: none;
+    /* Asegura que no haya subrayado */
 }
 
-.slider .list .item:nth-child(1) .content .description {
-    animation-delay: 0.8s !important;
-    /* Retrasa la animación de la descripción */
-}
-
-.slider .list .item:nth-child(1) .content .buttons {
-    animation-delay: 1s !important;
-    /* Retrasa la animación de los botones */
-}
-
-/* Animación para el clic del botón siguiente */
-.slider.next .list .item:nth-child(1) img {
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    border-radius: 30px;
-    animation: showImage .5s linear 1 forwards;
-    /* Animación para mostrar la imagen */
-}
-
-@keyframes showImage {
-    to {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        /* Se ajusta la imagen a tamaño completo */
-    }
-}
-
-.slider.next .thumbnail .item:nth-last-child(1) {
-    overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards;
-    /* Animación para mostrar la miniatura */
-}
-
-@keyframes showThumbnail {
-    from {
-        width: 0;
-        opacity: 0;
-        /* Comienza con opacidad 0 y sin ancho */
-    }
-}
-
-.slider.next .thumbnail {
-    animation: effectNext .5s linear 1 forwards;
-    /* Animación al pasar a la siguiente miniatura */
-}
-
-@keyframes effectNext {
-    from {
-        transform: translateX(150px);
-        /* Desplaza la miniatura hacia la derecha */
-    }
-}
-
-/* Animación para el clic del botón anterior */
-.slider.prev .list .item:nth-child(2) {
-    z-index: 2;
-    /* El segundo elemento se muestra en segundo plano */
-}
-
-.slider.prev .list .item:nth-child(2) img {
-    animation: outFrame 0.5s linear 1 forwards;
-    /* Animación al mover la imagen fuera de la vista */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-@keyframes outFrame {
-    to {
-        width: 150px;
-        height: 220px;
-        bottom: 50px;
-        left: 50%;
-        /* La imagen vuelve a su tamaño reducido y posición */
-        border-radius: 20px;
-    }
-}
-
-.slider.prev .thumbnail .item:nth-child(1) {
-    overflow: hidden;
-    opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
-    /* Animación para mostrar la miniatura al ir hacia atrás */
-}
-
-.slider.next .nextPrevArrows button,
-.slider.prev .nextPrevArrows button {
-    pointer-events: none;
-    /* Desactiva los botones mientras se realiza la animación */
-}
-
-.slider.prev .list .item:nth-child(2) .content .title,
-.slider.prev .list .item:nth-child(2) .content .title2,
-.slider.prev .list .item:nth-child(2) .content .description,
-.slider.prev .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1.5s linear 1 forwards !important;
-    /* Animación para ocultar el contenido */
-}
-
-@keyframes contentOut {
-    to {
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
-        /* El contenido se mueve hacia arriba y desaparece */
-    }
-}
-
-/* Línea separadora */
-.separator {
-    width: 100%;
-    /* Ocupa todo el ancho */
+.custom-navbar a::after {
+    content: '';
+    width: 0;
     height: 2px;
-    /* Altura de la línea */
-    background-color: #f2f2f2
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+
+.custom-navbar a:hover::after,
+.custom-navbar .home-active::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
+
+.header-btn {
+    padding: 0.7rem 1.4rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    /* Asegura que no haya subrayado */
+}
+
+.header-btn:hover {
+    background: #fa1216;
+}
+
+.home-btn {
+    padding: 0.7rem 1.4rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    /* Asegura que no haya subrayado */
+}
+
+.home-btn:hover {
+    background: #fa1216;
+}
+
+/* Home  */
+section {
+    padding: 4.5rem 0 1.5rem;
+}
+
+.custom-container {
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(2, 3, 7, 0.5);
+}
+
+.custom-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background: var(--bg-color) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1.5rem !important;
+    background: var(--main-color) !important;
+}
+
+.home-text {
+    z-index: 1000;
+    padding: 0 150px;
+}
+
+.home-text span {
+    color: var(--bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home-text h1 {
+    color: var(--bg-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/*---- banner general de paginas-----*/
+.banner_portada {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner_portada img {
+    width: 100%;
+    height: auto;
 }
 
 
 /* ---------- Banner de Streaming ----------- */
-.streaming-banner {
+.banner {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.streaming-banner img {
+.banner img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.streaming-banner img:hover {
+.banner img:hover {
     transform: scale(1.05);
 }
 
@@ -527,7 +278,7 @@ header {
     /* Puedes ajustar la fuente */
 }
 
-.streaming-banner a {
+.banner a {
     text-decoration: none;
     /* Sin subrayado */
     color: inherit;
@@ -557,7 +308,7 @@ header {
 
 /* ---------------------------------------Footer----------------------------------- */
 footer {
-    background-color: #192233;
+    background-color: #000;
     /* Color de fondo del pie de página */
     color: white;
     width: 100%;
@@ -862,7 +613,7 @@ footer {
     position: relative;
     height: 40%;
     padding: 15px;
-    background: #333;
+    background: #000;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -950,7 +701,7 @@ footer {
 
 .iconic-quotes,
 .fun-facts {
-    background-color: #fff;
+    background-color: #000;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -998,6 +749,8 @@ footer {
 /*the mother*/
 .list-group-item {
     font-size: 1.1rem;
+    background-color: #000;
+    color: #fff;
 }
 
 .btn-secondary {
@@ -1007,6 +760,10 @@ footer {
 
 .text-muted {
     font-size: 1.25rem;
+}
+
+.col-md-7 p.text-muted {
+    color: #ff3131 !important;
 }
 
 
@@ -1085,37 +842,6 @@ footer {
 }
 
 
-/* ---------------------------- MULTIMEDIA PAGE ---------------------------------- */
-.gallery-item {
-    position: relative;
-}
-
-.gallery-item img {
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-
-.modal-dialog {
-    max-width: 90%;
-}
-
-.modal-content {
-    border-radius: 10px;
-}
-
-.modal-body img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-}
-
 
 /* --------------------------- legendary Page ------------------------------- */
 .moment-card {
@@ -1151,6 +877,37 @@ footer {
     /* Color del borde para el botón activo (opcional) */
 }
 
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.modal-dialog {
+    max-width: 90%;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 
 /* -------------------------------------- MET THE CAST --------------------------------- */
 /* Imágenes de la sección "Meet the Cast" */
@@ -1162,6 +919,7 @@ footer {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 /* Imágenes dentro del modal (siempre cuadradas con bordes redondeados) */
 .modal-image {
     width: 200px;
@@ -1184,16 +942,87 @@ footer {
 
 /* --------------------RESPONSIVE---------------------------*/
 
-/* Slider */
-@media screen and (max-width: 768px) {
-    .slider .list .item .content {
-        padding-right: 0;
-    }
-
-    .slider .list .item .content .title {
-        font-size: 50px;
+/* Media Queries */
+@media (max-width: 1080px) {
+    .home-text {
+        padding: 0 100px;
     }
 }
+
+@media (max-width: 991px) {
+    .custom-header {
+        padding: 18px 4%;
+    }
+
+    section {
+        padding: 50px 4%;
+    }
+
+    .home-text {
+        padding: 0 4%;
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .custom-header {
+        padding: 12px 4%;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: var(--bg-color);
+    }
+
+    .custom-header.shadow #menu-icon {
+        color: var(--text-color);
+    }
+
+    .custom-navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgba(14, 55, 54, 0.15);
+        transition: 0.2s all linear;
+        text-align: center;
+        width: 100%;
+    }
+
+    .custom-navbar a {
+        color: var(--text-color);
+    }
+
+    .custom-navbar a:hover {
+        color: var(--main-color);
+        border-bottom: 1px solid var(--main-color);
+    }
+
+    .custom-navbar a::after {
+        display: none;
+    }
+
+    .custom-navbar.active {
+        top: 100%;
+    }
+
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
 
 /* Footer */
 @media (max-width: 768px) {
@@ -1223,7 +1052,77 @@ footer {
 /* Ajustes para pantallas más pequeñas (móvil) */
 @media (max-width: 768px) {
     .actor-img {
-        border-radius: 50%; /* Mantiene el borde redondeado en móvil */
+        border-radius: 50%;
+        /* Mantiene el borde redondeado en móvil */
         /* Puedes ajustar el tamaño si es necesario */
     }
+}
+
+
+
+/* Estilos solo para el modal de contacto */
+.contact-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos del contenido del modal */
+.contact-modal .modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centrar verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Tamaño máximo del formulario */
+    border-radius: 10px;
+}
+
+/* Botón de cerrar el modal */
+.contact-modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contact-modal .close:hover,
+.contact-modal .close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+/* Estilos del formulario */
+#contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact-form button {
+    background-color: #ff3131;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #333333cd;
 }

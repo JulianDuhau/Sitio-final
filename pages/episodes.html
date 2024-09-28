@@ -7,74 +7,68 @@
     <title>HIMYM.fans</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/icons/favicon-16x16.png" type="image/x-icon">
-    <!-- iconos de redes sociales -->
+    <!-- Iconos de redes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- icono para navbar -->
-        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="../assets/css/style.css">
-
 </head>
 
 <body>
-    <!----------------------- Comienzo del HEADER --------------------------------->
-<header>
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg py-4 py-lg-0 fixed-top">
-        <div class="container px-4">
-            <a href="../index.html"><img class="logo" src="../assets/icons/logositioweb2.png" alt="Logo del sitio"></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#top-navbar" aria-controls="top-navbar">
-                <i class="lni lni-grid-alt"></i>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
-                <!-- navigation bar content -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#top-navbar" aria-controls="top-navbar">
-                    <div class="d-flex justify-content-between p-3">
-                        <img class="logo" src="../assets/icons/logositioweb2.png" alt="logo del sitio">
-                        <i class="lni lni-cross-circle"></i>
-                    </div>
-                </button>
-                <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="./characters.html">Characters</a>
-                    </li>
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="./episodes.html">Episodes</a>
-                    </li>
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="./legendary.html">Legendary</a>
-                    </li>
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="./multimedia.html">Multimedia</a>
-                    </li>
-                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                        <a class="nav-link" href="#contact-us">Contact</a>
-                    </li>
-                </ul>
+    <!-- Navbar  -->
+    <header class="custom-header">
+        <a href="../index.html">
+            <img src="../assets/icons/logositioweb2.png" alt="Logo">
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- menu  -->
+        <ul class="custom-navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./characters.html">Characters</a></li>
+            <li><a href="./episodes.html" class="home-active">Episodes</a></li>
+            <li><a href="./legendary.html">Legendary</a></li>
+        </ul>
+        <!-- Botón Contact en la navbar -->
+        <a href="#" class="btn header-btn" id="contact-btn">Contact</a>
+
+        <!-- Modal específico para el formulario de contacto -->
+        <div id="contact-modal" class="modal contact-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Contact Us</h2>
+                <form id="contact-form" action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
-    </nav>
-
-</header>
-<div class="header-placeholder"></div>
-<!-------------------------------- fin del HEADER --------------------------------->
-
-<!-------------------------------- inicio del MAIN ------------------------------->
-<!--! A esta pagina hay que agregar los episodios restantes-->
+    </header>
+    <!---------------------------------------- fin del HEADER ----------------------------->
+    <!-------------------------------- inicio del MAIN ------------------------------->
+    <!--! A esta pagina hay que agregar los episodios restantes-->
     <main>
+        <div class="banner_portada">
+            <img src="../assets/img/banner-para-episodes.svg" alt="banner characters">
+            <div class="banner-text">
+                <h2>Kids, I’m going to tell you an incredible story....</h2>
+            </div>
+        </div>
         <div class="container my-5">
-            <div class="placeholder"></div>  
             <div class="title">
                 <h4>Episodes</h4>
             </div>
@@ -139,8 +133,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Pilot</h5>
-                                            <p class="card-text" id="desc1-1">The episode begins in the year 2030, with Ted Mosby telling his children the story of how he met their mother.  <span id="more1-1">Flashing back to the year 2005, Ted, a young architect, lives in New York with his best friend Marshall Eriksen, who proposes to his girlfriend Lily Aldrin, prompting Ted to feel an urgency to find true love. Encouraged by his womanizing friend Barney Stinson, Ted meets Robin Scherbatsky, a television reporter with whom he feels an immediate connection. However, the night ends with Ted telling Robin that he is in love with her, which turns out to be a hasty move. The episode concludes with the revelation that, although Robin is not "the mother," she is an integral part of the story of how Ted met her.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc1-1">The episode begins in the year 2030, with
+                                                Ted Mosby telling his children the story of how he met their mother.
+                                                <span id="more1-1">Flashing back to the year 2005, Ted, a young
+                                                    architect, lives in New York with his best friend Marshall Eriksen,
+                                                    who proposes to his girlfriend Lily Aldrin, prompting Ted to feel an
+                                                    urgency to find true love. Encouraged by his womanizing friend
+                                                    Barney Stinson, Ted meets Robin Scherbatsky, a television reporter
+                                                    with whom he feels an immediate connection. However, the night ends
+                                                    with Ted telling Robin that he is in love with her, which turns out
+                                                    to be a hasty move. The episode concludes with the revelation that,
+                                                    although Robin is not "the mother," she is an integral part of the
+                                                    story of how Ted met her.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -155,8 +161,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: Purple Giraffe</h5>
-                                            <p class="card-text" id="desc1-2">Ted tries to rectify his mistake of telling Robin that he loves her on their first date. To do this, he throws an   <span id="more1-2">impromptu party at his apartment, hoping that Robin will come and see that he's relaxed and not looking for a serious relationship. However, Robin doesn't show up, which leads Ted to extend the party for two more nights. Finally, when Robin does attend the party, Ted continues to act desperately, trying to impress her. In the end, Robin clarifies that she’s not interested in a relationship at that moment, but they agree to remain friends.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc1-2">Ted tries to rectify his mistake of
+                                                telling Robin that he loves her on their first date. To do this, he
+                                                throws an <span id="more1-2">impromptu party at his apartment, hoping
+                                                    that Robin will come and see that he's relaxed and not looking for a
+                                                    serious relationship. However, Robin doesn't show up, which leads
+                                                    Ted to extend the party for two more nights. Finally, when Robin
+                                                    does attend the party, Ted continues to act desperately, trying to
+                                                    impress her. In the end, Robin clarifies that she’s not interested
+                                                    in a relationship at that moment, but they agree to remain
+                                                    friends.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -171,10 +187,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Sweet Taste of Liberty</h5>
-                                            <p class="card-text" id="desc1-3">Barney convinces Ted to break out of his routine and seek more exciting adventures. They decide to go to the   <span id="more1-3">airport to try to pick up women who are about to travel, but they end up being detained by security. Later, the night leads them to a series of unexpected events, including a party in a limousine. Meanwhile, Robin spends time with Marshall and Lily at a bar, and although she initially doubts her new friends, she ends up enjoying their company. In the end, Ted realizes that the best adventures can happen when you least expect them, but he also values being with his friends.
+                                            <p class="card-text" id="desc1-3">Barney convinces Ted to break out of his
+                                                routine and seek more exciting adventures. They decide to go to the
+                                                <span id="more1-3">airport to try to pick up women who are about to
+                                                    travel, but they end up being detained by security. Later, the night
+                                                    leads them to a series of unexpected events, including a party in a
+                                                    limousine. Meanwhile, Robin spends time with Marshall and Lily at a
+                                                    bar, and although she initially doubts her new friends, she ends up
+                                                    enjoying their company. In the end, Ted realizes that the best
+                                                    adventures can happen when you least expect them, but he also values
+                                                    being with his friends.
 
-                                            </span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                                </span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -189,8 +215,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Return of the Shirt</h5>
-                                            <p class="card-text" id="desc1-4">Ted rediscovered a shirt he had stopped wearing and decided to give it a second chance, which leads him to   <span id="more1-4">reconsider other aspects of his life, such as past relationships. This prompts him to reach out to Natalie, an ex-girlfriend he abruptly left three years earlier. After giving the relationship another try, Ted realizes that he still doesn’t feel what he should, so he decides to end things with her again, but this time in a more direct and honest manner. Meanwhile, Barney is obsessed with a waitress and constantly seeks a new and exciting experience. The episode concludes with Ted acknowledging that he still hasn’t found the right person, but he is willing to keep searching.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc1-4">Ted rediscovered a shirt he had stopped
+                                                wearing and decided to give it a second chance, which leads him to <span
+                                                    id="more1-4">reconsider other aspects of his life, such as past
+                                                    relationships. This prompts him to reach out to Natalie, an
+                                                    ex-girlfriend he abruptly left three years earlier. After giving the
+                                                    relationship another try, Ted realizes that he still doesn’t feel
+                                                    what he should, so he decides to end things with her again, but this
+                                                    time in a more direct and honest manner. Meanwhile, Barney is
+                                                    obsessed with a waitress and constantly seeks a new and exciting
+                                                    experience. The episode concludes with Ted acknowledging that he
+                                                    still hasn’t found the right person, but he is willing to keep
+                                                    searching.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -211,8 +249,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Where Were We?</h5>
-                                            <p class="card-text" id="desc2-1">The group of friends deals with the aftermath of Marshall and Lily's breakup. While Marshall is devastated by  <span id="more2-1">the separation, Ted and Barney try to cheer him up by taking him to bars and engaging in fun activities, but nothing seems to work. Lily, on the other hand, has returned from San Francisco after realizing she wants to be with Marshall, but seeing how hurt he is, she decides not to contact him. Finally, after a series of failed attempts to move on, Marshall finds the closure he needs by destroying a box full of mementos from his relationship with Lily. However, the episode ends with an emotional twist when Lily appears at his door, and the two are reunited, hinting that their story is not over.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc2-1">The group of friends deals with the
+                                                aftermath of Marshall and Lily's breakup. While Marshall is devastated
+                                                by <span id="more2-1">the separation, Ted and Barney try to cheer him up
+                                                    by taking him to bars and engaging in fun activities, but nothing
+                                                    seems to work. Lily, on the other hand, has returned from San
+                                                    Francisco after realizing she wants to be with Marshall, but seeing
+                                                    how hurt he is, she decides not to contact him. Finally, after a
+                                                    series of failed attempts to move on, Marshall finds the closure he
+                                                    needs by destroying a box full of mementos from his relationship
+                                                    with Lily. However, the episode ends with an emotional twist when
+                                                    Lily appears at his door, and the two are reunited, hinting that
+                                                    their story is not over.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -227,8 +277,17 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: The Scorpion and the Toad</h5>
-                                            <p class="card-text" id="desc2-2">Marshall tries to start dating other women after his breakup with Lily. Barney offers to help him, but he uses  <span id="more2-2">every opportunity to win over the women Marshall meets, leaving him frustrated. Meanwhile, Lily returns to New York after her time in San Francisco and reconnects with Robin. As Lily tries to reconnect with her old life, she realizes that she still has feelings for Marshall. In the end, Marshall realizes that dating other people isn't as easy as it seemed, and Lily begins to understand the impact her departure had on him.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc2-2">Marshall tries to start dating other women
+                                                after his breakup with Lily. Barney offers to help him, but he uses
+                                                <span id="more2-2">every opportunity to win over the women Marshall
+                                                    meets, leaving him frustrated. Meanwhile, Lily returns to New York
+                                                    after her time in San Francisco and reconnects with Robin. As Lily
+                                                    tries to reconnect with her old life, she realizes that she still
+                                                    has feelings for Marshall. In the end, Marshall realizes that dating
+                                                    other people isn't as easy as it seemed, and Lily begins to
+                                                    understand the impact her departure had on him.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -243,8 +302,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Brunch</h5>
-                                            <p class="card-text" id="desc2-3">Ted organizes a brunch for his parents to meet Robin, but the family gathering doesn't go as planned.  <span id="more2-3">During the brunch, Ted discovers that his parents, while still married, have been living separate lives for years and can't stand each other. The situation becomes more complicated when his mother is attracted to Barney, while his father criticizes Ted and Robin's relationship. Meanwhile, Marshall and Lily face their own issues, trying to keep their reconciliation a secret from everyone. In the end, the brunch turns into chaos, and Ted learns that even the most normal families have secrets and problems.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc2-3">Ted organizes a brunch for his parents to
+                                                meet Robin, but the family gathering doesn't go as planned. <span
+                                                    id="more2-3">During the brunch, Ted discovers that his parents,
+                                                    while still married, have been living separate lives for years and
+                                                    can't stand each other. The situation becomes more complicated when
+                                                    his mother is attracted to Barney, while his father criticizes Ted
+                                                    and Robin's relationship. Meanwhile, Marshall and Lily face their
+                                                    own issues, trying to keep their reconciliation a secret from
+                                                    everyone. In the end, the brunch turns into chaos, and Ted learns
+                                                    that even the most normal families have secrets and problems.</span>
+                                            </p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -259,8 +329,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Ted Mosby: Architect</h5>
-                                            <p class="card-text" id="desc2-4">Robin remains indifferent when Ted complains that his job as an architect doesn’t impress anyone. After an  <span id="more2-4">argument, Ted goes out with Barney, who insists that being an architect is attractive to women. During the night, Ted uses his profession to flirt and meets a woman at a club, which makes Robin worried. With Lily's help, Robin tracks Ted, believing that he is being unfaithful. However, they eventually discover that the woman in question had broken up with Barney, who had been using Ted's name to impress her. The episode concludes with Ted and Robin making up and demonstrating their trust in each other.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc2-4">Robin remains indifferent when Ted
+                                                complains that his job as an architect doesn’t impress anyone. After an
+                                                <span id="more2-4">argument, Ted goes out with Barney, who insists that
+                                                    being an architect is attractive to women. During the night, Ted
+                                                    uses his profession to flirt and meets a woman at a club, which
+                                                    makes Robin worried. With Lily's help, Robin tracks Ted, believing
+                                                    that he is being unfaithful. However, they eventually discover that
+                                                    the woman in question had broken up with Barney, who had been using
+                                                    Ted's name to impress her. The episode concludes with Ted and Robin
+                                                    making up and demonstrating their trust in each other.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -281,8 +361,16 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Wait for It</h5>
-                                            <p class="card-text" id="desc3-1">Ted is trying to get over his breakup with Robin, who returns from a trip to Argentina with her new boyfriend, Gael. <span id="more3-1">Meanwhile, Barney encourages Ted to move on and takes him to a nightclub to help him find someone new. Ted eventually decides that the best way to move forward is by having a "revenge night," which leads to an encounter with a girl at the club. The episode marks the beginning of a new chapter for Ted, as he attempts to leave his relationship with Robin behind.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc3-1">Ted is trying to get over his breakup with
+                                                Robin, who returns from a trip to Argentina with her new boyfriend,
+                                                Gael. <span id="more3-1">Meanwhile, Barney encourages Ted to move on and
+                                                    takes him to a nightclub to help him find someone new. Ted
+                                                    eventually decides that the best way to move forward is by having a
+                                                    "revenge night," which leads to an encounter with a girl at the
+                                                    club. The episode marks the beginning of a new chapter for Ted, as
+                                                    he attempts to leave his relationship with Robin behind.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -297,8 +385,15 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: We’re Not from Here</h5>
-                                            <p class="card-text" id="desc3-2">Ted and Barney decide to pretend to be tourists in New York to see if they can get more attention from women.    <span id="more3-2">The strategy turns out to be surprisingly effective, but it also leads them into awkward situations. Meanwhile, Robin returns from Argentina and faces the reality of life in New York with her new boyfriend, Gael. On the other hand, Marshall and Lily try to create wills to ensure their future is protected.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc3-2">Ted and Barney decide to pretend to be
+                                                tourists in New York to see if they can get more attention from women.
+                                                <span id="more3-2">The strategy turns out to be surprisingly effective,
+                                                    but it also leads them into awkward situations. Meanwhile, Robin
+                                                    returns from Argentina and faces the reality of life in New York
+                                                    with her new boyfriend, Gael. On the other hand, Marshall and Lily
+                                                    try to create wills to ensure their future is protected.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -313,10 +408,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Third Wheel</h5>
-                                            <p class="card-text" id="desc3-3">Ted finds himself in an unexpected situation when two women, Trudy and Rachel, show interest in him at the    <span id="more3-3">same time. Encouraged by Barney, Ted faces the possibility of having a threesome. However, as he tries to decide whether to go through with it, the situation becomes more complicated and comedic. Meanwhile, Robin struggles to maintain her independence in her relationship with Gael, feeling like she's losing a part of her identity.
+                                            <p class="card-text" id="desc3-3">Ted finds himself in an unexpected
+                                                situation when two women, Trudy and Rachel, show interest in him at the
+                                                <span id="more3-3">same time. Encouraged by Barney, Ted faces the
+                                                    possibility of having a threesome. However, as he tries to decide
+                                                    whether to go through with it, the situation becomes more
+                                                    complicated and comedic. Meanwhile, Robin struggles to maintain her
+                                                    independence in her relationship with Gael, feeling like she's
+                                                    losing a part of her identity.
 
-                                            </span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                                </span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -331,8 +434,15 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Little Boys</h5>
-                                            <p class="card-text" id="desc3-4">Robin starts dating a man who has a young son, something that initially makes her uncomfortable due to her <span id="more3-4">aversion to children. However, she is surprised to find that she enjoys spending time with the boy, which leads her to question her stance on having kids in the future. Meanwhile, Lily becomes obsessed with beating a young child in an art contest, creating funny and competitive situations.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc3-4">Robin starts dating a man who has a young
+                                                son, something that initially makes her uncomfortable due to her <span
+                                                    id="more3-4">aversion to children. However, she is surprised to find
+                                                    that she enjoys spending time with the boy, which leads her to
+                                                    question her stance on having kids in the future. Meanwhile, Lily
+                                                    becomes obsessed with beating a young child in an art contest,
+                                                    creating funny and competitive situations.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -353,8 +463,15 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Do I Know You?</h5>
-                                            <p class="card-text" id="desc4-1">After proposing to Stella, Ted begins to question whether he knows her well enough to marry her. Meanwhile,   <span id="more4-1">Barney struggles with his newfound feelings for Robin and seeks advice from Lily on whether he should confess them. The episode explores the doubts and fears that arise at the start of a serious relationship, while Barney grapples with the dilemma of whether he's ready to change his lifestyle for love.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc4-1">After proposing to Stella, Ted begins to
+                                                question whether he knows her well enough to marry her. Meanwhile, <span
+                                                    id="more4-1">Barney struggles with his newfound feelings for Robin
+                                                    and seeks advice from Lily on whether he should confess them. The
+                                                    episode explores the doubts and fears that arise at the start of a
+                                                    serious relationship, while Barney grapples with the dilemma of
+                                                    whether he's ready to change his lifestyle for love.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -369,8 +486,16 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: The Best Burger in New York</h5>
-                                            <p class="card-text" id="desc4-2">Marshall is determined to find the best burger he's ever had, which he discovered when he first arrived in  <span id="more4-2">New York years ago. However, over time, he has forgotten where the restaurant was, leading him on an epic quest with his friends to rediscover it. The episode explores themes of nostalgia and the longing to relive past moments as the group travels around the city in search of the legendary burger.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc4-2">Marshall is determined to find the best
+                                                burger he's ever had, which he discovered when he first arrived in <span
+                                                    id="more4-2">New York years ago. However, over time, he has
+                                                    forgotten where the restaurant was, leading him on an epic quest
+                                                    with his friends to rediscover it. The episode explores themes of
+                                                    nostalgia and the longing to relive past moments as the group
+                                                    travels around the city in search of the legendary burger.</span>
+                                            </p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -385,8 +510,17 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: I Heart NJ</h5>
-                                            <p class="card-text" id="desc4-3">Ted begins to feel uneasy when Stella suggests moving to New Jersey to be closer to her work and her daughter.   <span id="more4-3">Ted, who has always been a die-hard New Yorker, can’t imagine living outside the city, which causes tension in his relationship with Stella. Meanwhile, Robin struggles to adapt to suburban life after temporarily moving in with her sister in New Jersey. The episode delves into the conflict between love for the city and the compromises one has to make in relationships.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc4-3">Ted begins to feel uneasy when Stella
+                                                suggests moving to New Jersey to be closer to her work and her daughter.
+                                                <span id="more4-3">Ted, who has always been a die-hard New Yorker, can’t
+                                                    imagine living outside the city, which causes tension in his
+                                                    relationship with Stella. Meanwhile, Robin struggles to adapt to
+                                                    suburban life after temporarily moving in with her sister in New
+                                                    Jersey. The episode delves into the conflict between love for the
+                                                    city and the compromises one has to make in relationships.</span>
+                                            </p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -401,8 +535,17 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Intervention</h5>
-                                            <p class="card-text" id="desc4-4">The group discovers a box labeled "Intervention" that they used in the past to address problematic behaviors among  <span id="more4-4">themselves. As they pack up to move into their new apartments, Ted finds the box and reminisces about various past interventions, such as one for Barney’s laser tag addiction and Lily’s British accent obsession. In the end, the group decides to hold an intervention for themselves, questioning whether they should proceed with their life plans or stay together as friends.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc4-4">The group discovers a box labeled
+                                                "Intervention" that they used in the past to address problematic
+                                                behaviors among <span id="more4-4">themselves. As they pack up to move
+                                                    into their new apartments, Ted finds the box and reminisces about
+                                                    various past interventions, such as one for Barney’s laser tag
+                                                    addiction and Lily’s British accent obsession. In the end, the group
+                                                    decides to hold an intervention for themselves, questioning whether
+                                                    they should proceed with their life plans or stay together as
+                                                    friends.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -423,8 +566,17 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Definitions</h5>
-                                            <p class="card-text" id="desc5-1">In this episode, the gang discusses the definitions of different relationship terms. Ted and Barney debate <span id="more5-1">what it means to be "officially" dating versus being "in a relationship." Ted is trying to define his relationship with his girlfriend, but he struggles with the lack of clear labels. Meanwhile, Robin and Barney make a pact to avoid "labels" and just enjoy their time together without worrying about the future. The episode explores how these labels affect relationships and the characters' perceptions of their own romantic situations.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc5-1">In this episode, the gang discusses the
+                                                definitions of different relationship terms. Ted and Barney debate <span
+                                                    id="more5-1">what it means to be "officially" dating versus being
+                                                    "in a relationship." Ted is trying to define his relationship with
+                                                    his girlfriend, but he struggles with the lack of clear labels.
+                                                    Meanwhile, Robin and Barney make a pact to avoid "labels" and just
+                                                    enjoy their time together without worrying about the future. The
+                                                    episode explores how these labels affect relationships and the
+                                                    characters' perceptions of their own romantic situations.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -439,8 +591,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: Double Date</h5>
-                                            <p class="card-text" id="desc5-2">Ted and Barney are put in an awkward situation during a double date with Robin and her new boyfriend, <span id="more5-2">The Captain. Ted is uncomfortable as he feels overshadowed by The Captain's impressive lifestyle and success. To compensate, Ted and Barney exaggerate their own achievements, which leads to comedic situations. Meanwhile, Robin begins to question her relationship with The Captain as she sees how his extravagant lifestyle creates a rift between them. The episode explores themes of insecurity and the pressure to keep up appearances while navigating the complexities of relationships.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc5-2">Ted and Barney are put in an awkward
+                                                situation during a double date with Robin and her new boyfriend, <span
+                                                    id="more5-2">The Captain. Ted is uncomfortable as he feels
+                                                    overshadowed by The Captain's impressive lifestyle and success. To
+                                                    compensate, Ted and Barney exaggerate their own achievements, which
+                                                    leads to comedic situations. Meanwhile, Robin begins to question her
+                                                    relationship with The Captain as she sees how his extravagant
+                                                    lifestyle creates a rift between them. The episode explores themes
+                                                    of insecurity and the pressure to keep up appearances while
+                                                    navigating the complexities of relationships.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -455,10 +617,23 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Robin 101</h5>
-                                            <p class="card-text" id="desc5-3">Ted takes on the role of teacher as he instructs Barney on how to properly navigate his relationship with Robin.  <span id="more5-3">Barney, eager to impress Robin but unsure of how to handle certain aspects of their relationship, agrees to Ted’s unconventional "course" on understanding Robin’s quirks and preferences. Throughout the episode, Ted uses detailed lessons and examples from Robin’s past to guide Barney. Meanwhile, Robin, unaware of Barney’s secret tutoring sessions, grows increasingly frustrated with his seemingly unnatural behavior. The episode humorously explores the dynamic between friendship, love, and the lengths people go to understand one another. Ultimately, Barney learns that while advice can help, being authentic is the key to a successful relationship with Robin.
+                                            <p class="card-text" id="desc5-3">Ted takes on the role of teacher as he
+                                                instructs Barney on how to properly navigate his relationship with
+                                                Robin. <span id="more5-3">Barney, eager to impress Robin but unsure of
+                                                    how to handle certain aspects of their relationship, agrees to Ted’s
+                                                    unconventional "course" on understanding Robin’s quirks and
+                                                    preferences. Throughout the episode, Ted uses detailed lessons and
+                                                    examples from Robin’s past to guide Barney. Meanwhile, Robin,
+                                                    unaware of Barney’s secret tutoring sessions, grows increasingly
+                                                    frustrated with his seemingly unnatural behavior. The episode
+                                                    humorously explores the dynamic between friendship, love, and the
+                                                    lengths people go to understand one another. Ultimately, Barney
+                                                    learns that while advice can help, being authentic is the key to a
+                                                    successful relationship with Robin.
 
-                                            </span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                                </span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -473,8 +648,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: The Sexless Innkeeper</h5>
-                                            <p class="card-text" id="desc5-4">Marshall and Lily invite Ted and Robin over for a double date, hoping to find the perfect couple to hang out   <span id="more5-4">with regularly. However, their over-enthusiasm for the evening leads to an awkward and uncomfortable situation, where Ted and Robin feel pressured by their friends' need for approval. At the same time, Barney, always on the hunt for romantic conquests, finds himself in an unusual situation when a woman he brings home sees him more as a friend than a romantic partner. Dubbed "The Sexless Innkeeper," Barney struggles to reclaim his status as a legendary ladies' man. The episode explores the complexities of friendship, couple dynamics, and the sometimes-blurred lines between romance and companionship.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc5-4">Marshall and Lily invite Ted and Robin
+                                                over for a double date, hoping to find the perfect couple to hang out
+                                                <span id="more5-4">with regularly. However, their over-enthusiasm for
+                                                    the evening leads to an awkward and uncomfortable situation, where
+                                                    Ted and Robin feel pressured by their friends' need for approval. At
+                                                    the same time, Barney, always on the hunt for romantic conquests,
+                                                    finds himself in an unusual situation when a woman he brings home
+                                                    sees him more as a friend than a romantic partner. Dubbed "The
+                                                    Sexless Innkeeper," Barney struggles to reclaim his status as a
+                                                    legendary ladies' man. The episode explores the complexities of
+                                                    friendship, couple dynamics, and the sometimes-blurred lines between
+                                                    romance and companionship.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -495,8 +682,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Big Days</h5>
-                                            <p class="card-text" id="desc6-1">Ted is on the verge of making a big move in his love life as he prepares to give a speech at a wedding. Throughout  <span id="more6-1">the episode, he recounts the events leading up to that moment, teasing the significance of "the big day." Meanwhile, Marshall and Lily are eager to start a family, but Lily becomes anxious when she overhears Marshall sharing their plans with his father, fearing added pressure. At the same time, Barney relentlessly teases Ted about his love life, speculating on his next romantic misadventure. The episode sets the stage for future developments, with a mysterious glimpse of Ted’s future wife at the end, hinting that his "big days" are just beginning.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc6-1">Ted is on the verge of making a big move
+                                                in his love life as he prepares to give a speech at a wedding.
+                                                Throughout <span id="more6-1">the episode, he recounts the events
+                                                    leading up to that moment, teasing the significance of "the big
+                                                    day." Meanwhile, Marshall and Lily are eager to start a family, but
+                                                    Lily becomes anxious when she overhears Marshall sharing their plans
+                                                    with his father, fearing added pressure. At the same time, Barney
+                                                    relentlessly teases Ted about his love life, speculating on his next
+                                                    romantic misadventure. The episode sets the stage for future
+                                                    developments, with a mysterious glimpse of Ted’s future wife at the
+                                                    end, hinting that his "big days" are just beginning.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -511,8 +709,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: Cleaning House</h5>
-                                            <p class="card-text" id="desc6-2">Barney helps his mother, Loretta, clean out her house as she prepares to move, uncovering a trove of childhood  <span id="more6-2">memories in the process. While sorting through old boxes, Barney discovers some shocking truths about his past, including the real identity of his supposed father, which forces him to confront long-held beliefs about his family. Meanwhile, the rest of the gang assists in the cleaning efforts, with Robin uncovering some embarrassing secrets about Loretta’s dating life. As Barney grapples with these revelations, he realizes that family is more about love and support than biology. The episode is a blend of comedy and heartfelt moments, revealing more about Barney’s background and his close relationship with his mother.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc6-2">Barney helps his mother, Loretta, clean
+                                                out her house as she prepares to move, uncovering a trove of childhood
+                                                <span id="more6-2">memories in the process. While sorting through old
+                                                    boxes, Barney discovers some shocking truths about his past,
+                                                    including the real identity of his supposed father, which forces him
+                                                    to confront long-held beliefs about his family. Meanwhile, the rest
+                                                    of the gang assists in the cleaning efforts, with Robin uncovering
+                                                    some embarrassing secrets about Loretta’s dating life. As Barney
+                                                    grapples with these revelations, he realizes that family is more
+                                                    about love and support than biology. The episode is a blend of
+                                                    comedy and heartfelt moments, revealing more about Barney’s
+                                                    background and his close relationship with his mother.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -527,8 +737,21 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Unfinished</h5>
-                                            <p class="card-text" id="desc6-3">Ted is offered the opportunity to design a new building for GNB, the same company where Barney works, after initially   <span id="more6-3">turning down the job. Barney, determined to convince Ted to take the offer, goes all out with various tactics, comparing the situation to romantic pursuits and unfinished business. Through a series of flashbacks, Barney highlights Ted’s history of leaving things incomplete, using humor and over-the-top metaphors to win him over. Meanwhile, Robin is struggling to get over her breakup with Don, and Marshall encourages her to stop dwelling on the past and move forward. Ultimately, Ted realizes that some opportunities are worth revisiting, deciding to take the project. The episode is about second chances, closure, and the idea that some things are worth finishing.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc6-3">Ted is offered the opportunity to design a
+                                                new building for GNB, the same company where Barney works, after
+                                                initially <span id="more6-3">turning down the job. Barney, determined to
+                                                    convince Ted to take the offer, goes all out with various tactics,
+                                                    comparing the situation to romantic pursuits and unfinished
+                                                    business. Through a series of flashbacks, Barney highlights Ted’s
+                                                    history of leaving things incomplete, using humor and over-the-top
+                                                    metaphors to win him over. Meanwhile, Robin is struggling to get
+                                                    over her breakup with Don, and Marshall encourages her to stop
+                                                    dwelling on the past and move forward. Ultimately, Ted realizes that
+                                                    some opportunities are worth revisiting, deciding to take the
+                                                    project. The episode is about second chances, closure, and the idea
+                                                    that some things are worth finishing.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -543,8 +766,23 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Subway Wars</h5>
-                                            <p class="card-text" id="desc6-4">The gang engages in a competitive race across New York City to prove who knows the fastest way to reach a restaurant  <span id="6-4">where Woody Allen was supposedly spotted. Each member of the group uses a different mode of transportation: Ted tries to outsmart everyone by taking a bus, Barney runs through the city, Marshall cycles, Robin opts for a taxi, and Lily relies on the subway. Throughout the race, personal challenges and insecurities surface—Ted feels like he’s not living up to his potential, Robin grapples with feeling stuck in her career, and Marshall is determined to prove he’s still fit. As they encounter obstacles and detours, the race becomes a metaphor for the different paces at which their lives are moving. In the end, the real prize turns out to be the bonding experience and their friendship, as they all arrive at the restaurant in their own way, realizing that everyone’s path is different, but equally valid.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc6-4">The gang engages in a competitive race
+                                                across New York City to prove who knows the fastest way to reach a
+                                                restaurant <span id="6-4">where Woody Allen was supposedly spotted. Each
+                                                    member of the group uses a different mode of transportation: Ted
+                                                    tries to outsmart everyone by taking a bus, Barney runs through the
+                                                    city, Marshall cycles, Robin opts for a taxi, and Lily relies on the
+                                                    subway. Throughout the race, personal challenges and insecurities
+                                                    surface—Ted feels like he’s not living up to his potential, Robin
+                                                    grapples with feeling stuck in her career, and Marshall is
+                                                    determined to prove he’s still fit. As they encounter obstacles and
+                                                    detours, the race becomes a metaphor for the different paces at
+                                                    which their lives are moving. In the end, the real prize turns out
+                                                    to be the bonding experience and their friendship, as they all
+                                                    arrive at the restaurant in their own way, realizing that everyone’s
+                                                    path is different, but equally valid.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -565,8 +803,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: The Best Man</h5>
-                                            <p class="card-text" id="desc7-1">Ted reflects on his romantic past as he prepares to be the best man at a wedding, anticipating an awkward reunion   <span id="more7-1">with Robin, who is attending with her new boyfriend. Meanwhile, Barney struggles with commitment fears in his relationship with Nora, and Marshall hilariously tries to keep Lily's pregnancy a secret. As the gang comes together, the episode explores themes of growth and change, with Ted learning that love, like life, unfolds in unexpected ways. The episode ends with a flash-forward, revealing that the wedding is actually Barney’s, leaving the bride’s identity a mystery.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc7-1">Ted reflects on his romantic past as he
+                                                prepares to be the best man at a wedding, anticipating an awkward
+                                                reunion <span id="more7-1">with Robin, who is attending with her new
+                                                    boyfriend. Meanwhile, Barney struggles with commitment fears in his
+                                                    relationship with Nora, and Marshall hilariously tries to keep
+                                                    Lily's pregnancy a secret. As the gang comes together, the episode
+                                                    explores themes of growth and change, with Ted learning that love,
+                                                    like life, unfolds in unexpected ways. The episode ends with a
+                                                    flash-forward, revealing that the wedding is actually Barney’s,
+                                                    leaving the bride’s identity a mystery.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -581,8 +829,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: The Naked Truth</h5>
-                                            <p class="card-text" id="desc7-2">Marshall faces a dilemma when a video from his wild college days resurfaces just as he's about to start his dream   <span id="more7-2">job at an environmental law firm. Fearing the video will ruin his chances, he contemplates whether to come clean or hope it goes unnoticed. Meanwhile, Ted struggles to choose between two women he's interested in: a wild, free-spirited girl and a more serious, career-driven woman. Barney, on the other hand, is determined to prove that he can be in a relationship without reverting to his playboy ways. The episode highlights the importance of honesty, self-reflection, and the consequences of past actions as the gang navigates their evolving lives.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc7-2">Marshall faces a dilemma when a video from
+                                                his wild college days resurfaces just as he's about to start his dream
+                                                <span id="more7-2">job at an environmental law firm. Fearing the video
+                                                    will ruin his chances, he contemplates whether to come clean or hope
+                                                    it goes unnoticed. Meanwhile, Ted struggles to choose between two
+                                                    women he's interested in: a wild, free-spirited girl and a more
+                                                    serious, career-driven woman. Barney, on the other hand, is
+                                                    determined to prove that he can be in a relationship without
+                                                    reverting to his playboy ways. The episode highlights the importance
+                                                    of honesty, self-reflection, and the consequences of past actions as
+                                                    the gang navigates their evolving lives.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -597,10 +856,22 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Ducky Tie</h5>
-                                            <p class="card-text" id="desc7-3">The gang gathers for dinner, where Ted runs into his ex-girlfriend Victoria, reigniting old feelings. As Ted grapples  <span id="more7-3">with whether to pursue her again, Victoria reveals she's now in a serious relationship, complicating the situation. Meanwhile, Barney becomes obsessed with learning how to make one of Lily's favorite Japanese dishes and strikes a deal with Marshall: if Barney can prepare it correctly, Marshall has to let Barney touch Lily's baby bump. However, if Barney fails, he has to wear a ridiculous "ducky tie" for a year. The episode blends humor and heart, as Ted faces unresolved feelings, while Barney’s antics lead to hilarious outcomes, including the eventual iconic punishment of the ducky tie.
+                                            <p class="card-text" id="desc7-3">The gang gathers for dinner, where Ted
+                                                runs into his ex-girlfriend Victoria, reigniting old feelings. As Ted
+                                                grapples <span id="more7-3">with whether to pursue her again, Victoria
+                                                    reveals she's now in a serious relationship, complicating the
+                                                    situation. Meanwhile, Barney becomes obsessed with learning how to
+                                                    make one of Lily's favorite Japanese dishes and strikes a deal with
+                                                    Marshall: if Barney can prepare it correctly, Marshall has to let
+                                                    Barney touch Lily's baby bump. However, if Barney fails, he has to
+                                                    wear a ridiculous "ducky tie" for a year. The episode blends humor
+                                                    and heart, as Ted faces unresolved feelings, while Barney’s antics
+                                                    lead to hilarious outcomes, including the eventual iconic punishment
+                                                    of the ducky tie.
 
-                                            </span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                                </span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -615,8 +886,20 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: The Stinson Missile Crisis</h5>
-                                            <p class="card-text" id="desc7-4">Barney’s playboy lifestyle faces a major challenge when he decides to confront his fear of intimacy by pursuing a  <span id="more7-4">serious relationship. As part of his new approach, he creates a “missile crisis” scenario to test his ability to stay emotionally connected without running away. Meanwhile, Ted, Marshall, and Lily are drawn into Barney’s elaborate scheme, trying to help him navigate his insecurities and maintain his commitment. The episode humorously explores themes of vulnerability and commitment, as Barney grapples with his feelings and the impact of his past behavior on his present relationships. The comedic high point is Barney’s dramatic attempt to prove his growth, leading to a series of memorable and hilarious moments.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc7-4">Barney’s playboy lifestyle faces a major
+                                                challenge when he decides to confront his fear of intimacy by pursuing a
+                                                <span id="more7-4">serious relationship. As part of his new approach, he
+                                                    creates a “missile crisis” scenario to test his ability to stay
+                                                    emotionally connected without running away. Meanwhile, Ted,
+                                                    Marshall, and Lily are drawn into Barney’s elaborate scheme, trying
+                                                    to help him navigate his insecurities and maintain his commitment.
+                                                    The episode humorously explores themes of vulnerability and
+                                                    commitment, as Barney grapples with his feelings and the impact of
+                                                    his past behavior on his present relationships. The comedic high
+                                                    point is Barney’s dramatic attempt to prove his growth, leading to a
+                                                    series of memorable and hilarious moments.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -637,8 +920,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: Farhampton</h5>
-                                            <p class="card-text" id="desc8-1">The season opener of the final season, Ted arrives in the town of Farhampton for Robin and Barney’s wedding,  <span id="more8-1">reflecting on the events that led him to this moment. The episode interweaves present-day scenes with flashbacks, showing Ted’s journey as he navigates the complexities of his relationships and friendships. Meanwhile, Robin and Barney’s wedding preparations hit some snags, and the group faces various challenges and revelations. The episode sets the tone for the season by blending humor and nostalgia, while hinting at future developments and unresolved storylines, including the mystery of Ted’s future wife.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc8-1">The season opener of the final season, Ted
+                                                arrives in the town of Farhampton for Robin and Barney’s wedding, <span
+                                                    id="more8-1">reflecting on the events that led him to this moment.
+                                                    The episode interweaves present-day scenes with flashbacks, showing
+                                                    Ted’s journey as he navigates the complexities of his relationships
+                                                    and friendships. Meanwhile, Robin and Barney’s wedding preparations
+                                                    hit some snags, and the group faces various challenges and
+                                                    revelations. The episode sets the tone for the season by blending
+                                                    humor and nostalgia, while hinting at future developments and
+                                                    unresolved storylines, including the mystery of Ted’s future
+                                                    wife.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -653,8 +947,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: The Pre-Nup</h5>
-                                            <p class="card-text" id="desc8-2">Barney and Robin’s upcoming wedding leads to a discussion about prenuptial agreements, causing tension between  <span id="more8-2">them. Barney, who has a complex view of relationships and commitments, insists on a prenuptial agreement to protect his assets, while Robin is hurt by the implication that he doesn’t fully trust her. Meanwhile, Ted and Marshall try to help the couple navigate this sensitive issue, but their own personal issues and insecurities come to light in the process. The episode humorously and poignantly explores themes of trust, commitment, and the challenges of balancing love and practicality in a relationship.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc8-2">Barney and Robin’s upcoming wedding leads
+                                                to a discussion about prenuptial agreements, causing tension between
+                                                <span id="more8-2">them. Barney, who has a complex view of relationships
+                                                    and commitments, insists on a prenuptial agreement to protect his
+                                                    assets, while Robin is hurt by the implication that he doesn’t fully
+                                                    trust her. Meanwhile, Ted and Marshall try to help the couple
+                                                    navigate this sensitive issue, but their own personal issues and
+                                                    insecurities come to light in the process. The episode humorously
+                                                    and poignantly explores themes of trust, commitment, and the
+                                                    challenges of balancing love and practicality in a
+                                                    relationship.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -669,8 +974,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Nannies</h5>
-                                            <p class="card-text" id="desc8-3">Marshall and Lily hire a series of nannies to help with their baby, but each candidate turns out to have quirks or   <span id="more8-3">issues that make them unsuitable. Meanwhile, Ted and Barney find themselves in a competition to see who can find the best babysitter, leading to a series of humorous mishaps and misunderstandings. As the search for the perfect nanny continues, Marshall and Lily grapple with the stress of parenthood and the realization that no one is perfect. The episode blends comedy and heart, highlighting the challenges of balancing work, parenting, and personal relationships while showcasing the importance of finding the right support system.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc8-3">Marshall and Lily hire a series of nannies
+                                                to help with their baby, but each candidate turns out to have quirks or
+                                                <span id="more8-3">issues that make them unsuitable. Meanwhile, Ted and
+                                                    Barney find themselves in a competition to see who can find the best
+                                                    babysitter, leading to a series of humorous mishaps and
+                                                    misunderstandings. As the search for the perfect nanny continues,
+                                                    Marshall and Lily grapple with the stress of parenthood and the
+                                                    realization that no one is perfect. The episode blends comedy and
+                                                    heart, highlighting the challenges of balancing work, parenting, and
+                                                    personal relationships while showcasing the importance of finding
+                                                    the right support system.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -685,8 +1001,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: Who Wants to Be a Godparent</h5>
-                                            <p class="card-text" id="desc8-4">Marshall and Lily face the challenging task of choosing godparents for their baby.  <span id="more8-4">The gang participates in a series of competitive and humorous trials to prove their suitability for the role, each trying to demonstrate why they would be the best choice. The episode explores themes of friendship and responsibility, as the group navigates their own insecurities and the weight of the decision. Ultimately, the process highlights the importance of trust and support within the group, and the episode ends with a heartwarming resolution that reaffirms their close bonds.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc8-4">Marshall and Lily face the challenging
+                                                task of choosing godparents for their baby. <span id="more8-4">The gang
+                                                    participates in a series of competitive and humorous trials to prove
+                                                    their suitability for the role, each trying to demonstrate why they
+                                                    would be the best choice. The episode explores themes of friendship
+                                                    and responsibility, as the group navigates their own insecurities
+                                                    and the weight of the decision. Ultimately, the process highlights
+                                                    the importance of trust and support within the group, and the
+                                                    episode ends with a heartwarming resolution that reaffirms their
+                                                    close bonds.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -707,8 +1033,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 1: The Locket</h5>
-                                            <p class="card-text" id="desc9-1">Ted discovers a locket that he had given to a past girlfriend, which he finds while preparing for Robin and Barney’s  <span id="more9-1">wedding. This discovery leads Ted to reflect on his past relationships and how they've shaped his journey. As he contemplates the significance of the locket and its connection to his past love, he also grapples with his feelings about his present situation. The episode intertwines humor with emotional depth, exploring themes of nostalgia, closure, and the impact of past relationships on the present. It provides a poignant look at how memories and mementos can influence our understanding of love and relationships.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc9-1">Ted discovers a locket that he had given
+                                                to a past girlfriend, which he finds while preparing for Robin and
+                                                Barney’s <span id="more9-1">wedding. This discovery leads Ted to reflect
+                                                    on his past relationships and how they've shaped his journey. As he
+                                                    contemplates the significance of the locket and its connection to
+                                                    his past love, he also grapples with his feelings about his present
+                                                    situation. The episode intertwines humor with emotional depth,
+                                                    exploring themes of nostalgia, closure, and the impact of past
+                                                    relationships on the present. It provides a poignant look at how
+                                                    memories and mementos can influence our understanding of love and
+                                                    relationships.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -723,8 +1060,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 2: Coming Back</h5>
-                                            <p class="card-text" id="desc9-2">Ted struggles with the realization that his past relationships and missed opportunities have shaped his  <span id="more9-2">current situation. The episode follows his emotional journey as he reflects on the people he's loved and the choices he's made. Meanwhile, Robin and Barney's wedding preparations continue, with the gang dealing with their own personal issues and realizations. The episode explores themes of regret, redemption, and the idea of returning to one's roots to find clarity. Ultimately, it highlights the importance of understanding and accepting one’s past in order to move forward with a clearer perspective.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc9-2">Ted struggles with the realization that
+                                                his past relationships and missed opportunities have shaped his <span
+                                                    id="more9-2">current situation. The episode follows his emotional
+                                                    journey as he reflects on the people he's loved and the choices he's
+                                                    made. Meanwhile, Robin and Barney's wedding preparations continue,
+                                                    with the gang dealing with their own personal issues and
+                                                    realizations. The episode explores themes of regret, redemption, and
+                                                    the idea of returning to one's roots to find clarity. Ultimately, it
+                                                    highlights the importance of understanding and accepting one’s past
+                                                    in order to move forward with a clearer perspective.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -739,8 +1086,18 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 3: Last Time in New York</h5>
-                                            <p class="card-text" id="desc9-3">Ted and his friends come together for a farewell gathering as Ted prepares to leave New York   <span id="more9-3">City and start a new chapter in his life. The episode delves into their emotional goodbyes, with each character reflecting on their time in the city and the impact it has had on their lives. Ted revisits significant locations and memories, while the group reminisces about their shared experiences and the bonds they've formed. The episode blends humor and sentiment, capturing the bittersweet nature of leaving behind familiar places and the people who have been a central part of one's journey.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc9-3">Ted and his friends come together for a
+                                                farewell gathering as Ted prepares to leave New York <span
+                                                    id="more9-3">City and start a new chapter in his life. The episode
+                                                    delves into their emotional goodbyes, with each character reflecting
+                                                    on their time in the city and the impact it has had on their lives.
+                                                    Ted revisits significant locations and memories, while the group
+                                                    reminisces about their shared experiences and the bonds they've
+                                                    formed. The episode blends humor and sentiment, capturing the
+                                                    bittersweet nature of leaving behind familiar places and the people
+                                                    who have been a central part of one's journey.</span></p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -755,8 +1112,19 @@
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">Episode 4: The Broken Code</h5>
-                                            <p class="card-text" id="desc9-4">Barney faces a dilemma when he discovers that Ted has broken an unspoken rule of their friendship. The episode <span id="more9-4">explores the concept of "the Bro Code," which Barney and Ted have always adhered to, and the fallout from Ted’s breach. Barney is initially hurt and angry, leading to a series of comedic and tense confrontations. Meanwhile, Ted tries to make amends, reflecting on the importance of trust and loyalty in their friendship. The episode highlights the complexities of maintaining friendships and the ways in which mistakes can be addressed and resolved, ultimately reaffirming the strength of their bond.</span></p>
-                                            <button class="btn btn-outline-secondary btn-sm">Read more <i class="bi bi-chevron-down"></i></button>
+                                            <p class="card-text" id="desc9-4">Barney faces a dilemma when he discovers
+                                                that Ted has broken an unspoken rule of their friendship. The episode
+                                                <span id="more9-4">explores the concept of "the Bro Code," which Barney
+                                                    and Ted have always adhered to, and the fallout from Ted’s breach.
+                                                    Barney is initially hurt and angry, leading to a series of comedic
+                                                    and tense confrontations. Meanwhile, Ted tries to make amends,
+                                                    reflecting on the importance of trust and loyalty in their
+                                                    friendship. The episode highlights the complexities of maintaining
+                                                    friendships and the ways in which mistakes can be addressed and
+                                                    resolved, ultimately reaffirming the strength of their bond.</span>
+                                            </p>
+                                            <button class="btn btn-outline-secondary btn-sm">Read more <i
+                                                    class="bi bi-chevron-down"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -814,13 +1182,13 @@
         <hr>
         <p>&copy; 2024 HIMYM Fans. All rights reserved.</p>
     </footer>
-<!--------------------------------------------- fin del FOOTER --------------------->
+    <!--------------------------------------------- fin del FOOTER --------------------->
     <script src="../assets/js/episodes.js"></script>
-    <script src="../assets/js/offcanvas.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-

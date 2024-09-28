@@ -1,52 +1,56 @@
-let nextBtn = document.querySelector('.next')
-let prevBtn = document.querySelector('.prev')
+let header = document.querySelector('header');
 
-let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
-let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
+window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
 
-thumbnail.appendChild(thumbnailItems[0])
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.custom-navbar'); // Cambiado a custom-navbar
 
-// Function for next button 
-nextBtn.onclick = function () {
-    moveSlider('next')
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 }
 
-
-// Function for prev button 
-prevBtn.onclick = function () {
-    moveSlider('prev')
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
 }
 
+var swiper = new Swiper(".home", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
-function moveSlider(direction) {
-    let sliderItems = sliderList.querySelectorAll('.item')
-    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
 
-    if (direction === 'next') {
-        sliderList.appendChild(sliderItems[0])
-        thumbnail.appendChild(thumbnailItems[0])
-        slider.classList.add('next')
-    } else {
-        sliderList.prepend(sliderItems[sliderItems.length - 1])
-        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
-        slider.classList.add('prev')
+
+// Seleccionamos el botón y el modal específicos del contacto
+const contactBtn = document.getElementById('contact-btn');
+const contactModal = document.getElementById('contact-modal');
+const contactCloseBtn = contactModal.querySelector('.close');
+
+// Mostrar el modal de contacto al hacer clic en el botón "Contact"
+contactBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Evitar que el enlace recargue la página
+    contactModal.style.display = 'block';
+});
+
+// Cerrar el modal de contacto al hacer clic en el botón "Cerrar" (X)
+contactCloseBtn.addEventListener('click', function() {
+    contactModal.style.display = 'none';
+});
+
+// Cerrar el modal de contacto si el usuario hace clic fuera del contenido del modal
+window.addEventListener('click', function(event) {
+    if (event.target == contactModal) {
+        contactModal.style.display = 'none';
     }
-
-
-    slider.addEventListener('animationend', function () {
-        if (direction === 'next') {
-            slider.classList.remove('next')
-        } else {
-            slider.classList.remove('prev')
-        }
-    }, { once: true }) // Remove the event listener after it's triggered once
-}
-// Función para cambiar de imagen automáticamente cada 3 segundos (3000 ms)
-let autoSlide = setInterval(function () {
-    moveSlider('next')  // Mueve el slider a la siguiente imagen automáticamente
-}, 5000)
-
-
-
+});
